@@ -5,7 +5,10 @@ $("#card button").click(function(){
     $(".main-popup").css("display","block")
 
     var html = $(".popupDeneme").html();
-    $("#popup-icerik").html(html)
+    $("#popup-icerik").html(html);
+    $("#popup-icerik button").css("display","none")
+    $("#popup-icerik img").css("height","250px")
+
 })
 $(".close-popup").click(function(){
     $(".main-popup").css("display","none")
