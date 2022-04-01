@@ -1,9 +1,11 @@
 $("#proje").click(function(){
     $("#icerik").slideToggle("display")
 })
+
+
 $("#card button").click(function(){
     $(".main-popup").css("display","block")
-
+    
     var html = $(".popupDeneme").html();
     $("#popup-icerik").html(html);
     $("#popup-icerik button").css("display","none")
