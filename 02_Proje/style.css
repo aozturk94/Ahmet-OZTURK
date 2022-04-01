@@ -4,48 +4,81 @@
     box-sizing: border-box;
 }
 
+#container {
+    background:
+        linear-gradient(limegreen,
+            transparent),
+        linear-gradient(90deg,
+            skyblue,
+            transparent),
+        linear-gradient(-90deg,
+            coral,
+            transparent);
+
+    background-blend-mode: screen;
+
+    height: 100vw;
+}
+
 .navbar {
     width: 100%;
-    height: 50px;
-    background-color: teal;
+    height: 4%;
+    background-color: #00BFFF;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
+    position: sticky;
+    top: 0px;
+    z-index: 1;
 }
 
 #icerik {
     display: none;
     position: absolute;
     width: 80px;
-    background-color: white;
+    background-color: #B2FFFF;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     padding: 12px 16px;
     align-items: center;
     z-index: 1;
 }
 
-a {
-
+#icerik a {
     display: flex;
     align-items: center;
     justify-items: center;
     justify-content: center;
     text-decoration: none;
+    padding: 4px 1px;
+    margin: 3px 0px;
+}
+
+#icerik a:hover {
+    border-bottom: 2px solid #00BFFF;
 }
 
 .navbar div {
     text-align: center;
     width: 80px;
+    cursor: pointer;
+    color: white;
+    border-bottom: 5px ridge white;
 }
 
-#slider{
-    margin-top: 15px;
+.navbar div:hover {
+    color: #002244;
+}
+
+#slider {
+    margin-top: 25px;
     display: flex;
     justify-content: center;
+
 }
 
 #sliderContainer {
     position: relative;
+    height: 20%;
 }
 
 .slide {
@@ -54,16 +87,21 @@ a {
 
 #prevSlide,
 #nextSlide {
+
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    text-decoration: none;
     cursor: pointer;
     position: absolute;
     color: white;
     top: 0px;
-    padding-top: 19%;
     font-weight: bold;
     font-size: 30px;
     transition: 500ms ease;
-    height: 100%;
-    background-color: rgba(38, 4, 134, 0.7);
+    height: 99%;
+    background-color: rgba(150, 139, 184, 0.4);
 }
 
 #prevSlide {
@@ -82,7 +120,7 @@ a {
 
 #prevSlide:hover,
 #nextSlide:hover {
-    background-color: rgba(227, 224, 235, 0.3);
+    background-color: rgba(115, 88, 211, 0.3);
 
 }
 
@@ -107,7 +145,163 @@ a {
 
 .dot:hover,
 .active {
-    background-color: blue !important;
-    width: 17px !important;
-    height: 17px !important;
+    background-color: blue;
+    width: 17px;
+    height: 17px;
+}
+
+#cardContainer {
+    margin-top: 25px;
+    padding-top: 25px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#cards-1 {
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    width: 100%;
+    height: 50%;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(0,212,255,1) 0%, rgba(9,121,106,1) 35%, rgba(2,0,36,1) 100%);
+
+}
+
+#cards-2 {
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 50%;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(0,212,255,1) 0%, rgb(64, 64, 163) 35%, rgb(84, 13, 102) 100%);
+    margin-bottom: 25px
+}
+
+#card {
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 90%;
+    width: 29%;
+    background-color: #303037;
+    overflow: hidden;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+    color: white;
+    transition: 0.3s ease;
+}
+
+#card:hover {
+    box-shadow: 0 5px 10px 0 rgb(37, 146, 189);
+    transform: scale(1.03);
+}
+
+/* #card:hover{
+    box-shadow: 0 5px 10px 0 rgb(37, 146, 189);
+    transform: translateY(-1%);
+} */
+
+h4 {
+    padding-top: 50px;
+}
+
+p {
+    padding: 25px;
+}
+
+button {
+
+    border: none;
+    padding: 16px 32px;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    color: #3363ff;
+    background-color: #d8e0fd;
+    width: 250px;
+    transition: 0.5 ease;
+}
+
+button:hover {
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+}
+
+.main-popup {
+    position: fixed;
+    top: 10px;
+    left: 0px;
+    width: 100vw;
+    height: 100vw;
+    display: none;
+    z-index: 1;
+
+}
+
+.popup {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 600px;
+    height: 700px;
+    background-color: lightseagreen;
+    margin: 100px auto;
+    position: relative;
+    border-radius: 5px;
+}
+
+.close-popup {
+
+    cursor: pointer;
+    text-align: center;
+    line-height: 25px;
+    color: #E52B50;
+    position: absolute;
+    top: 5px;
+    right: 7px;
+    font-size: 25px;
+}
+
+.close-popup:hover {
+    color: #DE3163;
+}
+
+.content-popup {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-items: center;
+}
+
+#popup-icerik {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-items: center;
+}
+
+.popup a {
+    text-decoration: none;
+    background-color: brown;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-size: 24px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.popup a:hover {
+    background-color: red;
+}
+
+h3,
+p {
+    margin-bottom: 20px;
+    font-size: 24px;
 }
