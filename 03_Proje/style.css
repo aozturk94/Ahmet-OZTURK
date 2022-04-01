@@ -1,0 +1,53 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+#container{
+    background-image: url(https://wallpaperaccess.com/full/1698004.jpg);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#navbar{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    height: 10%;
+    border-bottom: 1px solid black;
+    background-color: #008E97;
+    position: fixed;
+    align-items: center;
+}
+
+#homePageTitle{
+    display: flex;
+    justify-content: center;
+    width: 30%;
+}
+
+
+#navbarRooter{
+    display: flex;
+    width: 70%;
+    justify-content: space-evenly;
+}
+
+#contents{
+    width: 80%;
+}
+
+#slider, #CSS, #BOOTSTRAP, #JAVASCRIPT, #JQUERY, #HAKKIMDA, #İLETİŞİM{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    color: white;
+    
+}
