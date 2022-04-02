@@ -6,6 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <title>Document</title>
 </head>
@@ -13,50 +16,264 @@
 <body>
     <div id="container">
         <div id="navbar">
-            <div id="homePageTitle">WİSSEN AKADEMİE</div>
+
+            <div id="homePageTitle"><a href="#">WISSEN AKADEMIE</a></div><i id="hedef" class="fa-solid fa-ghost"></i>
             <div id="navbarRooter">
-                <div><a href="" id="">ANASAYFA</a></div>
-                <div class="HTML">HTML</div>
-                <div class="HTML">CSS</div>
-                <div><a href="" id="">CSS</a></div>
-                <div><a href="" id="">BOOTSTRAP</a></div>
-                <div><a href="" id="">JAVASCRIPT</a></div>
-                <div><a href="" id="">JQUERY</a></div>
-                <div><a href="" id="">HAKKIMDA</a></div>
-                <div><a href="" id="">İLETİŞİM</a></div>
+                <div id="deneme" class="ANASAYFA"><a href="#" style="text-decoration: none;">ANASAYFA</a></div>
+                <div id="deneme" class="HTML">HTML</div>
+                <div id="deneme" class="CSS"><a href="css.html" style="text-decoration: none;">CSS</a></div>
+                <div id="deneme" class="BOOTSTRAP">BOOTSTRAP</div>
+                <div id="deneme" class="JAVASCRIPT">JAVASCRIPT</div>
+                <div id="deneme" class="JQUERY">JQUERY</div>
+                <div id="deneme" class="HAKKIMDA">HAKKIMDA</div>
+                <div id="deneme" class="İLETİŞİM">İLETİŞİM</div>
             </div>
         </div>
         <div id="contents">
             <div id="slider">
-
+                <div id="sliderContainer">
+                    <div class="slide">
+                        <img src="https://picsum.photos/id/2/1300/667" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="https://picsum.photos/id/250/1300/667" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="https://picsum.photos/id/367/1300/667" alt="">
+                    </div>
+                    <a id="prevSlide">&#10094</a>
+                    <a id="nextSlide">&#10095</a>
+                    <div id="dots">
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                </div>
             </div>
             <div id="HTML">
-                <div>HTML</div>
-                <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa nostrum quam magni, repudiandae deserunt, nulla explicabo ut facilis, facere tenetur qui esse doloremque aut dolorem cupiditate maxime voluptates. Neque cupiditate ducimus illo recusandae, suscipit aliquam at quia voluptate excepturi est omnis perspiciatis rem! Illum consequuntur esse eius quibusdam placeat vitae culpa praesentium velit temporibus. Consequatur harum, repellendus laboriosam aliquid voluptate ea nihil mollitia nulla quo? Fugit at doloremque facilis nostrum distinctio repudiandae, voluptatem incidunt aliquid est esse deserunt maiores molestiae tempora tenetur fugiat laudantium quia ut quis quidem inventore sunt. Rerum repellat saepe aspernatur neque libero tempore eos nisi distinctio cupiditate rem quo at dolore minus itaque reprehenderit officiis quae, vitae molestiae facere dolores. Quaerat doloribus culpa natus minima cum deserunt sed distinctio aut cumque? Natus fugiat, magnam minus totam reprehenderit ad, eos iusto expedita illo, nostrum porro debitis enim perspiciatis maiores. Soluta, eum, magnam rerum eaque odit voluptates a omnis vitae dolorum dicta culpa ipsam minus aliquid sequi sed nobis distinctio molestias! Dignissimos reiciendis pariatur obcaecati perspiciatis optio saepe beatae! Velit inventore corrupti placeat rerum doloribus ea voluptatem beatae ut accusantium itaque, saepe, eveniet debitis modi atque alias quibusdam quidem dolores. Consectetur quae distinctio odio, aliquid corrupti doloribus aspernatur?</div>
+                <div id="name"><i style="font-size: 20px;" class="fa-brands fa-html5"></i> HTML</div>
+                <div>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa nostrum quam magni, repudiandae
+                        deserunt, nulla explicabo ut facilis, facere tenetur qui esse doloremque aut dolorem cupiditate
+                        maxime voluptates. Neque cupiditate ducimus illo recusandae, suscipit aliquam at quia voluptate
+                        excepturi est omnis perspiciatis rem! Illum consequuntur esse eius quibusdam placeat vitae culpa
+                        praesentium velit temporibus. Consequatur harum, repellendus laboriosam aliquid voluptate ea
+                        nihil
+                        mollitia nulla quo? Fugit at doloremque facilis nostrum distinctio repudiandae, voluptatem
+                        incidunt
+                        aliquid est esse deserunt maiores molestiae tempora tenetur fugiat laudantium quia ut quis
+                        quidem
+                        inventore sunt. Rerum repellat saepe aspernatur neque libero tempore eos nisi distinctio
+                        cupiditate
+                        rem quo at dolore minus itaque reprehenderit officiis quae, vitae molestiae facere dolores.
+                        Quaerat
+                        doloribus culpa natus minima cum deserunt sed distinctio aut cumque? Natus fugiat, magnam minus
+                        totam reprehenderit ad, eos iusto expedita illo, nostrum porro debitis enim perspiciatis
+                        maiores.
+                        Soluta, eum, magnam rerum eaque odit voluptates a omnis vitae dolorum dicta culpa ipsam minus
+                        aliquid sequi sed nobis distinctio molestias! Dignissimos reiciendis pariatur obcaecati
+                        perspiciatis
+                        optio saepe beatae! Velit inventore corrupti placeat rerum doloribus ea voluptatem beatae ut
+                        accusantium itaque, saepe, eveniet debitis modi atque alias quibusdam quidem dolores.
+                        Consectetur
+                        quae distinctio odio, aliquid corrupti doloribus aspernatur?</p>
+
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem fugit, omnis placeat doloribus
+                        ullam vel aut officiis amet, similique quibusdam, quis aspernatur exercitationem animi molestias
+                        possimus illo! Expedita repellat natus ratione. Ratione, eveniet quam soluta, autem ipsa ullam
+                        quidem et eaque nesciunt magnam dolorem ipsum velit unde odit esse, qui distinctio modi incidunt
+                        voluptatem quasi saepe quas? Illo, aliquam error placeat labore consequatur cupiditate
+                        necessitatibus aliquid voluptatum enim maiores ducimus hic distinctio quo libero unde tempora.
+                        Doloremque recusandae incidunt magnam, atque sed culpa deleniti quisquam hic praesentium? Unde
+                        blanditiis laudantium eaque possimus rem? Adipisci aut nulla id cumque deserunt, quo est quam
+                        voluptatum blanditiis illo quasi nobis voluptas iusto ex eveniet iste quaerat quibusdam, ipsum
+                        unde dolor, fugiat reiciendis explicabo consectetur numquam. Ex ullam cupiditate laborum ipsum
+                        sint rem unde nemo nisi reprehenderit dicta debitis laudantium iste, nam repellendus officiis
+                        odio necessitatibus, dolore, eligendi provident est. Suscipit, expedita velit. Debitis non autem
+                        quia at officia asperiores nostrum quam fuga a earum eveniet voluptas qui, odit aliquid atque
+                        distinctio expedita officiis dolore doloribus ducimus cum. Perferendis cumque consequatur sunt
+                        eos quibusdam odit error deleniti, cupiditate modi tempore veniam similique aut enim aliquam
+                        magnam unde quisquam vitae accusamus. Provident sapiente maiores vero. Odit omnis eos cupiditate
+                        est incidunt assumenda, soluta, laudantium repudiandae velit suscipit numquam. Assumenda quae
+                        beatae consequuntur magnam ullam. Fuga provident, architecto aliquid ullam voluptatibus voluptas
+                        distinctio mollitia harum dolorem saepe ex velit nulla, assumenda libero delectus illum,
+                        similique unde? Fugit similique libero adipisci consequuntur debitis vel doloremque, animi velit
+                        voluptas esse est amet reiciendis ab, quia temporibus sit repellat, incidunt doloribus ipsa
+                        rerum officia repellendus! Saepe ea libero facere. Consequuntur reiciendis quam expedita,
+                        deleniti dolores error. Provident, voluptatum dicta unde sapiente excepturi illum quam quo?
+                        Labore, sit facere quas excepturi iste ratione soluta omnis, illum est explicabo vero officia.
+                    </p>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo est eaque nam, ipsa aut nulla
+                        ipsam commodi incidunt sunt eius ullam consequatur soluta harum rerum libero nostrum quasi culpa
+                        quos veritatis aliquam! Mollitia, dicta commodi itaque quis quo cumque? Recusandae voluptate
+                        harum amet exercitationem ipsum aliquid in, animi earum omnis soluta iste reprehenderit. Rem sed
+                        fugiat, laborum dicta voluptatum magnam quae hic id dignissimos harum, aliquam ab tempora
+                        debitis numquam consectetur ipsum sint quaerat ipsam sequi quis nesciunt aspernatur. Eius
+                        magnam, ipsam sed in cum eum temporibus dolorem repellendus magni a ullam odio aperiam aut,
+                        veniam fuga debitis earum animi.</p>
+                </div>
             </div>
-            <div id="CSS">
-                <div>CSS</div>
-                <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, laudantium?</div>
-            </div>
+
             <div id="BOOTSTRAP">
-                <div>BOOTSTRAP</div>
-                <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, laudantium?</div>
+                <div id="name"><i style="font-size: 20px;" class="fa-brands fa-bootstrap"></i> BOOTSTRAP</div>
+                <div>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa nostrum quam magni, repudiandae
+                        deserunt, nulla explicabo ut facilis, facere tenetur qui esse doloremque aut dolorem cupiditate
+                        maxime voluptates. Neque cupiditate ducimus illo recusandae, suscipit aliquam at quia voluptate
+                        excepturi est omnis perspiciatis rem! Illum consequuntur esse eius quibusdam placeat vitae culpa
+                        praesentium velit temporibus. Consequatur harum, repellendus laboriosam aliquid voluptate ea
+                        nihil
+                        mollitia nulla quo? Fugit at doloremque facilis nostrum distinctio repudiandae, voluptatem
+                        incidunt
+                        aliquid est esse deserunt maiores molestiae tempora tenetur fugiat laudantium quia ut quis
+                        quidem
+                        inventore sunt. Rerum repellat saepe aspernatur neque libero tempore eos nisi distinctio
+                        cupiditate
+                        rem quo at dolore minus itaque reprehenderit officiis quae, vitae molestiae facere dolores.
+                        Quaerat
+                        doloribus culpa natus minima cum deserunt sed distinctio aut cumque? Natus fugiat, magnam minus
+                        totam reprehenderit ad, eos iusto expedita illo, nostrum porro debitis enim perspiciatis
+                        maiores.
+                        Soluta, eum, magnam rerum eaque odit voluptates a omnis vitae dolorum dicta culpa ipsam minus
+                        aliquid sequi sed nobis distinctio molestias! Dignissimos reiciendis pariatur obcaecati
+                        perspiciatis
+                        optio saepe beatae! Velit inventore corrupti placeat rerum doloribus ea voluptatem beatae ut
+                        accusantium itaque, saepe, eveniet debitis modi atque alias quibusdam quidem dolores.
+                        Consectetur
+                        quae distinctio odio, aliquid corrupti doloribus aspernatur?</p>
+
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione ipsam id quasi cum minima a quod
+                        laborum repellendus ducimus esse?</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione ipsam id quasi cum minima a quod
+                        laborum repellendus ducimus esse?</p>
+                </div>
             </div>
             <div id="JAVASCRIPT">
-                <div>JAVASCRIPT</div>
-                <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, laudantium?</div>
+                <div id="name"><i style="font-size: 20px;" class="fa-brands fa-js"></i> JAVASCRIPT</div>
+                <div>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa nostrum quam magni, repudiandae
+                        deserunt, nulla explicabo ut facilis, facere tenetur qui esse doloremque aut dolorem cupiditate
+                        maxime voluptates. Neque cupiditate ducimus illo recusandae, suscipit aliquam at quia voluptate
+                        excepturi est omnis perspiciatis rem! Illum consequuntur esse eius quibusdam placeat vitae culpa
+                        praesentium velit temporibus. Consequatur harum, repellendus laboriosam aliquid voluptate ea
+                        nihil
+                        mollitia nulla quo? Fugit at doloremque facilis nostrum distinctio repudiandae, voluptatem
+                        incidunt
+                        aliquid est esse deserunt maiores molestiae tempora tenetur fugiat laudantium quia ut quis
+                        quidem
+                        inventore sunt. Rerum repellat saepe aspernatur neque libero tempore eos nisi distinctio
+                        cupiditate
+                        rem quo at dolore minus itaque reprehenderit officiis quae, vitae molestiae facere dolores.
+                        Quaerat
+                        doloribus culpa natus minima cum deserunt sed distinctio aut cumque? Natus fugiat, magnam minus
+                        totam reprehenderit ad, eos iusto expedita illo, nostrum porro debitis enim perspiciatis
+                        maiores.
+                        Soluta, eum, magnam rerum eaque odit voluptates a omnis vitae dolorum dicta culpa ipsam minus
+                        aliquid sequi sed nobis distinctio molestias! Dignissimos reiciendis pariatur obcaecati
+                        perspiciatis
+                        optio saepe beatae! Velit inventore corrupti placeat rerum doloribus ea voluptatem beatae ut
+                        accusantium itaque, saepe, eveniet debitis modi atque alias quibusdam quidem dolores.
+                        Consectetur
+                        quae distinctio odio, aliquid corrupti doloribus aspernatur?</p>
+
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione ipsam id quasi cum minima a quod
+                        laborum repellendus ducimus esse?</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione ipsam id quasi cum minima a quod
+                        laborum repellendus ducimus esse?</p>
+                </div>
             </div>
             <div id="JQUERY">
-                <div>JQUERY</div>
-                <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, laudantium?</div>
+                <div id="name"><i style="font-size: 20px;" class="fa-solid fa-j"></i> JQUERY</div>
+                <div>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa nostrum quam magni, repudiandae
+                        deserunt, nulla explicabo ut facilis, facere tenetur qui esse doloremque aut dolorem cupiditate
+                        maxime voluptates. Neque cupiditate ducimus illo recusandae, suscipit aliquam at quia voluptate
+                        excepturi est omnis perspiciatis rem! Illum consequuntur esse eius quibusdam placeat vitae culpa
+                        praesentium velit temporibus. Consequatur harum, repellendus laboriosam aliquid voluptate ea
+                        nihil
+                        mollitia nulla quo? Fugit at doloremque facilis nostrum distinctio repudiandae, voluptatem
+                        incidunt
+                        aliquid est esse deserunt maiores molestiae tempora tenetur fugiat laudantium quia ut quis
+                        quidem
+                        inventore sunt. Rerum repellat saepe aspernatur neque libero tempore eos nisi distinctio
+                        cupiditate
+                        rem quo at dolore minus itaque reprehenderit officiis quae, vitae molestiae facere dolores.
+                        Quaerat
+                        doloribus culpa natus minima cum deserunt sed distinctio aut cumque? Natus fugiat, magnam minus
+                        totam reprehenderit ad, eos iusto expedita illo, nostrum porro debitis enim perspiciatis
+                        maiores.
+                        Soluta, eum, magnam rerum eaque odit voluptates a omnis vitae dolorum dicta culpa ipsam minus
+                        aliquid sequi sed nobis distinctio molestias! Dignissimos reiciendis pariatur obcaecati
+                        perspiciatis
+                        optio saepe beatae! Velit inventore corrupti placeat rerum doloribus ea voluptatem beatae ut
+                        accusantium itaque, saepe, eveniet debitis modi atque alias quibusdam quidem dolores.
+                        Consectetur
+                        quae distinctio odio, aliquid corrupti doloribus aspernatur?</p>
+
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione ipsam id quasi cum minima a quod
+                        laborum repellendus ducimus esse?</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione ipsam id quasi cum minima a quod
+                        laborum repellendus ducimus esse?</p>
+                </div>
             </div>
             <div id="HAKKIMDA">
-                <div>HAKKIMDA</div>
-                <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, laudantium?</div>
+                <div id="name"><i style="font-size: 20px;" class="fa-solid fa-address-card"></i> HAKKIMDA</div>
+                <div>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa nostrum quam magni, repudiandae
+                        deserunt, nulla explicabo ut facilis, facere tenetur qui esse doloremque aut dolorem cupiditate
+                        maxime voluptates. Neque cupiditate ducimus illo recusandae, suscipit aliquam at quia voluptate
+                        excepturi est omnis perspiciatis rem! Illum consequuntur esse eius quibusdam placeat vitae culpa
+                        praesentium velit temporibus. Consequatur harum, repellendus laboriosam aliquid voluptate ea
+                        nihil
+                        mollitia nulla quo? Fugit at doloremque facilis nostrum distinctio repudiandae, voluptatem
+                        incidunt
+                        aliquid est esse deserunt maiores molestiae tempora tenetur fugiat laudantium quia ut quis
+                        quidem
+                        inventore sunt. Rerum repellat saepe aspernatur neque libero tempore eos nisi distinctio
+                        cupiditate
+                        rem quo at dolore minus itaque reprehenderit officiis quae, vitae molestiae facere dolores.
+                        Quaerat
+                        doloribus culpa natus minima cum deserunt sed distinctio aut cumque? Natus fugiat, magnam minus
+                        totam reprehenderit ad, eos iusto expedita illo, nostrum porro debitis enim perspiciatis
+                        maiores.
+                        Soluta, eum, magnam rerum eaque odit voluptates a omnis vitae dolorum dicta culpa ipsam minus
+                        aliquid sequi sed nobis distinctio molestias! Dignissimos reiciendis pariatur obcaecati
+                        perspiciatis
+                        optio saepe beatae! Velit inventore corrupti placeat rerum doloribus ea voluptatem beatae ut
+                        accusantium itaque, saepe, eveniet debitis modi atque alias quibusdam quidem dolores.
+                        Consectetur
+                        quae distinctio odio, aliquid corrupti doloribus aspernatur?</p>
+
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam facere odio ipsam ducimus
+                        eveniet, impedit natus dolore veniam sed id consectetur odit iure, autem atque adipisci libero
+                        quasi! Deleniti libero nisi maiores facilis minus quae delectus dolor sint nulla ipsam vitae
+                        quis, cupiditate praesentium exercitationem ratione ipsum omnis architecto asperiores.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione ipsam id quasi cum minima a quod
+                        laborum repellendus ducimus esse?</p>
+                </div>
             </div>
             <div id="İLETİŞİM">
-                <div>İLETİŞİM</div>
-                <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, laudantium?</div>
+                <div id="name"><i style="font-size: 20px;" class="fa-solid fa-phone-volume"></i> İLETİŞİM</div>
+                <div id="contact">
+                    <form id="conc">
+                        <div id="concDiv">
+                            <div style="width: 30%;"><i style="font-size:25px" class="fa-regular fa-user"></i></div>
+                            <div style="width: 70%;"><input type="text" name="" id="a" placeholder="Ad Soyad"></div>
+                        </div>
+                        <div id="concDiv">
+                            <div style="width: 30%;"><i style="font-size:25px" class="fa-regular fa-envelope"></i></div>
+                            <div style="width: 70%;"><input type="text" name="" id="a" placeholder="E-mail"></div>
+                        </div>
+                        <div id="concDiv">
+                            <div style="width: 30%;"><i style="font-size:25px;  " class="fa-regular fa-comment-dots"></i></div>
+                            <div style="width: 70%;"><input type="text" name="" id="a" placeholder="Mesajınız"></div>
+                        </div>
+                        <div id="concDiv">
+                            <div style="width: 30%;"></div>
+                            <div style="width: 75%; display: flex; justify-content: center;"><input style="width: 300px; height: 40px; border: none; background-color: rgb(87, 80, 80); color: aliceblue;" type="submit" name="" id="" placeholder=""></div>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
