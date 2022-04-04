@@ -8,7 +8,7 @@ $(document).ready(function () {
             scrollTop: totalScroll
         }, 500);
         
-       $(this).classList.toggle('active');
+    //    $(this).classList.add("active");
         
     });
 
