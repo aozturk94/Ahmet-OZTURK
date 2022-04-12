@@ -1,3 +1,5 @@
+
+
 a {
     text-decoration: none !important;
     color: black !important;
@@ -18,7 +20,7 @@ footer a {
 
 ul li {
     border-right: 1px solid lightgray;
-    padding: 5px 16px;
+    padding: 5px 14px;
     font-size: 16px;
     font-weight: 700;
     display: flex;
