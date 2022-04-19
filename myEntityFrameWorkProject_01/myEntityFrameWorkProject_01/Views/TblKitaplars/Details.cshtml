@@ -1,0 +1,55 @@
+﻿@model myEntityFrameWorkProject_01.Models.TblKitaplar
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>TblKitaplar</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.KitapAd)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.KitapAd)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.KitapSayfaSayisi)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.KitapSayfaSayisi)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.KitapStokAdedi)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.KitapStokAdedi)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Tur)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Tur.TurAd)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.YayinEvi)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.YayinEvi.YayineviAd)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Yazar)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Yazar.YazarAd)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Isbn">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
