@@ -1,5 +1,5 @@
 {
-  "FilePath": "c:\\Users\\Ahmet Ozturk\\source\\repos\\aozturk94\\WEB7_Project\\Entity Framework\\EF_Codefirst\\EF_Codefirst.csproj",
+  "FilePath": "c:\\Users\\Web ve Mobil Öğle.DESKTOP-MTU4EKB\\Desktop\\PROJELER\\Ahmet-OZTURK\\EF_CodeFirst\\EF_CodeFirst.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-3.0",
     "LanguageVersion": "5.0",
@@ -15616,146 +15616,146 @@
     ],
     "CSharpLanguageVersion": 900
   },
-  "RootNamespace": "EF_Codefirst",
+  "RootNamespace": "EF_CodeFirst",
   "Documents": [
     {
-      "FilePath": "c:\\Users\\Ahmet Ozturk\\source\\repos\\aozturk94\\WEB7_Project\\Entity Framework\\EF_Codefirst\\Views\\Category\\Edit.cshtml",
-      "TargetPath": "Views\\Category\\Edit.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Ahmet Ozturk\\source\\repos\\aozturk94\\WEB7_Project\\Entity Framework\\EF_Codefirst\\Views\\Home\\Privacy.cshtml",
-      "TargetPath": "Views\\Home\\Privacy.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Ahmet Ozturk\\source\\repos\\aozturk94\\WEB7_Project\\Entity Framework\\EF_Codefirst\\Views\\Publisher\\Delete.cshtml",
-      "TargetPath": "Views\\Publisher\\Delete.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Ahmet Ozturk\\source\\repos\\aozturk94\\WEB7_Project\\Entity Framework\\EF_Codefirst\\Views\\Publisher\\Details.cshtml",
-      "TargetPath": "Views\\Publisher\\Details.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Ahmet Ozturk\\source\\repos\\aozturk94\\WEB7_Project\\Entity Framework\\EF_Codefirst\\Views\\Publisher\\Create.cshtml",
-      "TargetPath": "Views\\Publisher\\Create.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Ahmet Ozturk\\source\\repos\\aozturk94\\WEB7_Project\\Entity Framework\\EF_Codefirst\\Views\\Author\\Create.cshtml",
-      "TargetPath": "Views\\Author\\Create.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Ahmet Ozturk\\source\\repos\\aozturk94\\WEB7_Project\\Entity Framework\\EF_Codefirst\\Views\\Book\\Details.cshtml",
-      "TargetPath": "Views\\Book\\Details.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Ahmet Ozturk\\source\\repos\\aozturk94\\WEB7_Project\\Entity Framework\\EF_Codefirst\\Views\\Author\\Index.cshtml",
-      "TargetPath": "Views\\Author\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Ahmet Ozturk\\source\\repos\\aozturk94\\WEB7_Project\\Entity Framework\\EF_Codefirst\\Views\\Publisher\\Edit.cshtml",
-      "TargetPath": "Views\\Publisher\\Edit.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Ahmet Ozturk\\source\\repos\\aozturk94\\WEB7_Project\\Entity Framework\\EF_Codefirst\\Views\\Category\\Delete.cshtml",
-      "TargetPath": "Views\\Category\\Delete.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Ahmet Ozturk\\source\\repos\\aozturk94\\WEB7_Project\\Entity Framework\\EF_Codefirst\\Views\\Book\\Edit.cshtml",
-      "TargetPath": "Views\\Book\\Edit.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Ahmet Ozturk\\source\\repos\\aozturk94\\WEB7_Project\\Entity Framework\\EF_Codefirst\\Views\\Category\\Details.cshtml",
-      "TargetPath": "Views\\Category\\Details.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Ahmet Ozturk\\source\\repos\\aozturk94\\WEB7_Project\\Entity Framework\\EF_Codefirst\\Views\\Category\\Create.cshtml",
-      "TargetPath": "Views\\Category\\Create.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Ahmet Ozturk\\source\\repos\\aozturk94\\WEB7_Project\\Entity Framework\\EF_Codefirst\\Views\\Book\\Index.cshtml",
-      "TargetPath": "Views\\Book\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Ahmet Ozturk\\source\\repos\\aozturk94\\WEB7_Project\\Entity Framework\\EF_Codefirst\\Views\\Book\\Delete.cshtml",
-      "TargetPath": "Views\\Book\\Delete.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Ahmet Ozturk\\source\\repos\\aozturk94\\WEB7_Project\\Entity Framework\\EF_Codefirst\\Views\\_ViewStart.cshtml",
-      "TargetPath": "Views\\_ViewStart.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Ahmet Ozturk\\source\\repos\\aozturk94\\WEB7_Project\\Entity Framework\\EF_Codefirst\\Views\\Shared\\Error.cshtml",
-      "TargetPath": "Views\\Shared\\Error.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Ahmet Ozturk\\source\\repos\\aozturk94\\WEB7_Project\\Entity Framework\\EF_Codefirst\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
-      "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Ahmet Ozturk\\source\\repos\\aozturk94\\WEB7_Project\\Entity Framework\\EF_Codefirst\\Views\\Category\\Index.cshtml",
-      "TargetPath": "Views\\Category\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Ahmet Ozturk\\source\\repos\\aozturk94\\WEB7_Project\\Entity Framework\\EF_Codefirst\\Views\\Book\\DeleteFromDB.cshtml",
+      "FilePath": "c:\\Users\\Web ve Mobil Öğle.DESKTOP-MTU4EKB\\Desktop\\PROJELER\\Ahmet-OZTURK\\EF_CodeFirst\\Views\\Book\\DeleteFromDB.cshtml",
       "TargetPath": "Views\\Book\\DeleteFromDB.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\Ahmet Ozturk\\source\\repos\\aozturk94\\WEB7_Project\\Entity Framework\\EF_Codefirst\\Views\\Author\\Delete.cshtml",
-      "TargetPath": "Views\\Author\\Delete.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Ahmet Ozturk\\source\\repos\\aozturk94\\WEB7_Project\\Entity Framework\\EF_Codefirst\\Views\\Publisher\\Index.cshtml",
-      "TargetPath": "Views\\Publisher\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Ahmet Ozturk\\source\\repos\\aozturk94\\WEB7_Project\\Entity Framework\\EF_Codefirst\\Views\\Book\\Create.cshtml",
+      "FilePath": "c:\\Users\\Web ve Mobil Öğle.DESKTOP-MTU4EKB\\Desktop\\PROJELER\\Ahmet-OZTURK\\EF_CodeFirst\\Views\\Book\\Create.cshtml",
       "TargetPath": "Views\\Book\\Create.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\Ahmet Ozturk\\source\\repos\\aozturk94\\WEB7_Project\\Entity Framework\\EF_Codefirst\\Views\\Shared\\_Layout.cshtml",
+      "FilePath": "c:\\Users\\Web ve Mobil Öğle.DESKTOP-MTU4EKB\\Desktop\\PROJELER\\Ahmet-OZTURK\\EF_CodeFirst\\Views\\Category\\Delete.cshtml",
+      "TargetPath": "Views\\Category\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Web ve Mobil Öğle.DESKTOP-MTU4EKB\\Desktop\\PROJELER\\Ahmet-OZTURK\\EF_CodeFirst\\Views\\Shared\\_Layout.cshtml",
       "TargetPath": "Views\\Shared\\_Layout.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\Ahmet Ozturk\\source\\repos\\aozturk94\\WEB7_Project\\Entity Framework\\EF_Codefirst\\Views\\_ViewImports.cshtml",
+      "FilePath": "c:\\Users\\Web ve Mobil Öğle.DESKTOP-MTU4EKB\\Desktop\\PROJELER\\Ahmet-OZTURK\\EF_CodeFirst\\Views\\Shared\\Error.cshtml",
+      "TargetPath": "Views\\Shared\\Error.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Web ve Mobil Öğle.DESKTOP-MTU4EKB\\Desktop\\PROJELER\\Ahmet-OZTURK\\EF_CodeFirst\\Views\\Publisher\\Edit.cshtml",
+      "TargetPath": "Views\\Publisher\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Web ve Mobil Öğle.DESKTOP-MTU4EKB\\Desktop\\PROJELER\\Ahmet-OZTURK\\EF_CodeFirst\\Views\\Author\\Create.cshtml",
+      "TargetPath": "Views\\Author\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Web ve Mobil Öğle.DESKTOP-MTU4EKB\\Desktop\\PROJELER\\Ahmet-OZTURK\\EF_CodeFirst\\Views\\Book\\Delete.cshtml",
+      "TargetPath": "Views\\Book\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Web ve Mobil Öğle.DESKTOP-MTU4EKB\\Desktop\\PROJELER\\Ahmet-OZTURK\\EF_CodeFirst\\Views\\Category\\Edit.cshtml",
+      "TargetPath": "Views\\Category\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Web ve Mobil Öğle.DESKTOP-MTU4EKB\\Desktop\\PROJELER\\Ahmet-OZTURK\\EF_CodeFirst\\Views\\Publisher\\Create.cshtml",
+      "TargetPath": "Views\\Publisher\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Web ve Mobil Öğle.DESKTOP-MTU4EKB\\Desktop\\PROJELER\\Ahmet-OZTURK\\EF_CodeFirst\\Views\\Author\\Index.cshtml",
+      "TargetPath": "Views\\Author\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Web ve Mobil Öğle.DESKTOP-MTU4EKB\\Desktop\\PROJELER\\Ahmet-OZTURK\\EF_CodeFirst\\Views\\Book\\Edit.cshtml",
+      "TargetPath": "Views\\Book\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Web ve Mobil Öğle.DESKTOP-MTU4EKB\\Desktop\\PROJELER\\Ahmet-OZTURK\\EF_CodeFirst\\Views\\_ViewStart.cshtml",
+      "TargetPath": "Views\\_ViewStart.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Web ve Mobil Öğle.DESKTOP-MTU4EKB\\Desktop\\PROJELER\\Ahmet-OZTURK\\EF_CodeFirst\\Views\\Category\\Index.cshtml",
+      "TargetPath": "Views\\Category\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Web ve Mobil Öğle.DESKTOP-MTU4EKB\\Desktop\\PROJELER\\Ahmet-OZTURK\\EF_CodeFirst\\Views\\Publisher\\Delete.cshtml",
+      "TargetPath": "Views\\Publisher\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Web ve Mobil Öğle.DESKTOP-MTU4EKB\\Desktop\\PROJELER\\Ahmet-OZTURK\\EF_CodeFirst\\Views\\Publisher\\Details.cshtml",
+      "TargetPath": "Views\\Publisher\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Web ve Mobil Öğle.DESKTOP-MTU4EKB\\Desktop\\PROJELER\\Ahmet-OZTURK\\EF_CodeFirst\\Views\\Author\\Delete.cshtml",
+      "TargetPath": "Views\\Author\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Web ve Mobil Öğle.DESKTOP-MTU4EKB\\Desktop\\PROJELER\\Ahmet-OZTURK\\EF_CodeFirst\\Views\\Book\\Details.cshtml",
+      "TargetPath": "Views\\Book\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Web ve Mobil Öğle.DESKTOP-MTU4EKB\\Desktop\\PROJELER\\Ahmet-OZTURK\\EF_CodeFirst\\Views\\Publisher\\Index.cshtml",
+      "TargetPath": "Views\\Publisher\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Web ve Mobil Öğle.DESKTOP-MTU4EKB\\Desktop\\PROJELER\\Ahmet-OZTURK\\EF_CodeFirst\\Views\\Category\\Details.cshtml",
+      "TargetPath": "Views\\Category\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Web ve Mobil Öğle.DESKTOP-MTU4EKB\\Desktop\\PROJELER\\Ahmet-OZTURK\\EF_CodeFirst\\Views\\_ViewImports.cshtml",
       "TargetPath": "Views\\_ViewImports.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\Ahmet Ozturk\\source\\repos\\aozturk94\\WEB7_Project\\Entity Framework\\EF_Codefirst\\Views\\Author\\Details.cshtml",
+      "FilePath": "c:\\Users\\Web ve Mobil Öğle.DESKTOP-MTU4EKB\\Desktop\\PROJELER\\Ahmet-OZTURK\\EF_CodeFirst\\Views\\Author\\Edit.cshtml",
+      "TargetPath": "Views\\Author\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Web ve Mobil Öğle.DESKTOP-MTU4EKB\\Desktop\\PROJELER\\Ahmet-OZTURK\\EF_CodeFirst\\Views\\Category\\Create.cshtml",
+      "TargetPath": "Views\\Category\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Web ve Mobil Öğle.DESKTOP-MTU4EKB\\Desktop\\PROJELER\\Ahmet-OZTURK\\EF_CodeFirst\\Views\\Author\\Details.cshtml",
       "TargetPath": "Views\\Author\\Details.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\Ahmet Ozturk\\source\\repos\\aozturk94\\WEB7_Project\\Entity Framework\\EF_Codefirst\\Views\\Home\\Index.cshtml",
+      "FilePath": "c:\\Users\\Web ve Mobil Öğle.DESKTOP-MTU4EKB\\Desktop\\PROJELER\\Ahmet-OZTURK\\EF_CodeFirst\\Views\\Home\\Index.cshtml",
       "TargetPath": "Views\\Home\\Index.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\Ahmet Ozturk\\source\\repos\\aozturk94\\WEB7_Project\\Entity Framework\\EF_Codefirst\\Views\\Author\\Edit.cshtml",
-      "TargetPath": "Views\\Author\\Edit.cshtml",
+      "FilePath": "c:\\Users\\Web ve Mobil Öğle.DESKTOP-MTU4EKB\\Desktop\\PROJELER\\Ahmet-OZTURK\\EF_CodeFirst\\Views\\Home\\Privacy.cshtml",
+      "TargetPath": "Views\\Home\\Privacy.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Web ve Mobil Öğle.DESKTOP-MTU4EKB\\Desktop\\PROJELER\\Ahmet-OZTURK\\EF_CodeFirst\\Views\\Book\\Index.cshtml",
+      "TargetPath": "Views\\Book\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Web ve Mobil Öğle.DESKTOP-MTU4EKB\\Desktop\\PROJELER\\Ahmet-OZTURK\\EF_CodeFirst\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
       "FileKind": "mvc"
     }
   ],
