@@ -4,25 +4,34 @@
     ViewData["Title"] = "Details";
 }
 
-<h2>POP-UP Olarak yapmayı dene</h2>
+<small>POP-UP Olarak yapmayı dene</small>
 
-<div class="books-of-sujeesh">
-    <h2 class="diplay-4">@Model.ProductName Details</h2>
-    <div class="container">
-        <section id="sujeesh-books" class="row">
-            <div class="col-xs-12 book-sec-head">
-            </div>
-            <div class="col-xs-12 col-sm-6 col-lg-4">
-                <div class="book-card">
-                    <img src="@Model.ProductImage" alt="">
-                    <h3>@Model.ProductId</h3>
-                    <p class="price">@Model.ProductPrice ₺</p>
-                    <p>@Model.ProductName</p>
-                </div>
-
-            </div>
-
-        </section>
+<div class="bookcontainer">
+    <div class="book">
+        <div class="bookpic"
+             style="background-image: url('@Model.ProductImage');">
+        </div>
+        <div class="bookinfo">
+            <div class="title">@Model.ProductName</div>
+            <div class="price">₺@Model.ProductPrice</div>
+            <div class="">lorem10</div>
+            <ul class="controls">
+                <li class="control">
+                    <a class="" asp-action="Index">
+                        <i class="fa-solid fa-backward"></i>
+                    </a>
+                </li>
+                <li class="control">
+                    <a class="" asp-action="Edit" asp-route-id="@Model.ProductId">
+                        <i class="fa-solid fa-pen-to-square"></i>
+                    </a>
+                </li>
+                <li class="control">
+                    <a class="" asp-action="Delete" asp-route-id="@Model.ProductId">
+                        <i class="fa-solid fa-trash-can"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
     </div>
 </div>
-<a class="btn btn-primary" asp-action="Index">Back to Categories Page</a>

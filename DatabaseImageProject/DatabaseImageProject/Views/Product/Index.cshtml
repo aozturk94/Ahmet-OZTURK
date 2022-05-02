@@ -11,20 +11,20 @@
 
             @foreach (var item in Model)
             {
-                <div class="col-xs-12 col-sm-6 col-lg-4">
+                <div class="cards col-xs-12 col-sm-6 col-lg-4">
                     <div class="book-card">
                         <img src="@item.ProductImage" alt="">
                         <h3 class="text-center mt-2 text-uppercase">@item.ProductName</h3>
                         <p class="price">₺@item.ProductPrice</p>
                         <p>İşlemler</p>
-                        <a class="" asp-action="Edit" asp-route-id="@item.ProductId"><button>Edit</button></a>
                         <a class="" asp-action="Details" asp-route-id="@item.ProductId"><button>Details</button></a>
+                        <a class="" asp-action="Edit" asp-route-id="@item.ProductId"><button>Edit</button></a>
                         <a class="" asp-action="Delete" asp-route-id="@item.ProductId"><button>Delete</button></a>
                     </div>
                 </div>
             }
 
-            <div class="col-xs-12 col-sm-6 col-md-4">
+            <div class="cards col-xs-12 col-sm-6 col-md-4">
                 <div class="book-card">
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4mareVHjcDYZQdLp1dHrLKr5-6Zv5IQ03AA&usqp=CAU" alt="">
                     <h3 class="text-center mt-2">A RIVER ENCHANTED</h3>
@@ -35,7 +35,7 @@
                 </div>
             </div>
 
-            <div class="col-xs-12 col-sm-6 col-lg-4">
+            <div class="cards col-xs-12 col-sm-6 col-lg-4">
                 <div class="book-card">
                     <img src="https://almabooks.com/wp-content/uploads/2016/10/ulysses-evergreen-james-joyce-1.jpg" alt="">
                     <h3 class="text-center mt-2">ULYSSES</h3>

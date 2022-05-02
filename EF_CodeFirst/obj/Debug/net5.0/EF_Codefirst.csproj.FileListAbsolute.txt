@@ -275,3 +275,4 @@ C:\Users\Web ve Mobil Öğle.DESKTOP-MTU4EKB\Desktop\PROJELER\Ahmet-OZTURK\EF_Co
 C:\Users\Web ve Mobil Öğle.DESKTOP-MTU4EKB\Desktop\PROJELER\Ahmet-OZTURK\EF_CodeFirst\obj\Debug\net5.0\ref\EF_CodeFirst.dll
 C:\Users\Web ve Mobil Öğle.DESKTOP-MTU4EKB\Desktop\PROJELER\Ahmet-OZTURK\EF_CodeFirst\obj\Debug\net5.0\EF_CodeFirst.pdb
 C:\Users\Web ve Mobil Öğle.DESKTOP-MTU4EKB\Desktop\PROJELER\Ahmet-OZTURK\EF_CodeFirst\obj\Debug\net5.0\EF_CodeFirst.genruntimeconfig.cache
+C:\Users\Ahmet Ozturk\Desktop\Ahmet-OZTURK\EF_CodeFirst\bin\Debug\net5.0\EF_CodeFirst.StaticWebAssets.xml

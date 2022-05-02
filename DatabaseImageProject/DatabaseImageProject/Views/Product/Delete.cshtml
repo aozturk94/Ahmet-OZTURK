@@ -1,24 +1,25 @@
 ﻿@model DatabaseImageProject.Models.Entities.Product
 
 
-<div class="book books-of-sujeesh">
-    <div class="container">
-        <section id="sujeesh-books" class="row">
-            <div class="col-xs-12 book-sec-head">
-            </div>
-            <div class="col-xs-12 col-sm-6 col-lg-4">
-                <div class="book-card">
-                    <img src="@Model.ProductImage" alt="">
-                    <h3>@Model.ProductId</h3>
-                    <p class="price">@Model.ProductPrice ₺</p>
-                    <p>@Model.ProductName</p>
-                </div>
-            </div>
-            <form asp-action="Delete">
+
+<div class="bookcontainer">
+    <div class="book">
+        <div class="bookpic"
+             style="background-image: url('@Model.ProductImage');">
+        </div>
+        <div class="bookinfo">
+            <div class="title">@Model.ProductName</div>
+            <div class="price">₺@Model.ProductPrice</div>
+            <div class="">ISBN: @Model.ProductId</div>
+            <div class="">lorem10</div>
+            <form asp-action="Delete" class="">
                 <input type="hidden" asp-for="ProductId">
                 <input type="submit" value="Delete" class="btn btn-danger deletebutton">
                 <a class="btn btn-primary" asp-action="Index">Back to Categories</a>
             </form>
-        </section>
+        </div>
     </div>
 </div>
+
+
+

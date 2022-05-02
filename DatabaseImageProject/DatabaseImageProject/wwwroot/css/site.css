@@ -298,7 +298,7 @@ a {
 
 .nav {
     position: fixed;
-    z-index: 98;
+    z-index: 500;
     /*top:0; Deneme*/
 }
 
@@ -881,7 +881,6 @@ footer {
 }
 
 .social .fa {
-    color: grey;
     font-size: 22px;
     padding: 10px 15px;
     background-color: #ffeba7;
@@ -924,3 +923,126 @@ footer ul {
         transform: translateY(600px) rotateZ(-90deg);
     }
 }
+
+
+/*BOOK CSS*/
+
+.bookcontainer {
+    margin-bottom: 50px;
+}
+
+
+.book {
+    margin: auto;
+    height: 65vh;
+    width: 82vh;
+    /*flex-basis: 30%;*/
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    /* overflow: hidden; */
+    /* margin-bottom: 5%;*/
+    border-radius: 1%;
+    background: rgb(246, 246, 246);
+}
+
+.cards img {
+    transition: all 1s ease;
+}
+.cards img:hover{
+    transform: translateY(-5px);
+
+}
+
+.bookpic {
+    flex-basis: 50%;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+.book img {
+    width: 100%;
+}
+
+.bookinfo * {
+    margin: 0;
+    padding: 0;
+}
+
+.bookinfo {
+    flex-basis: 50%;
+    padding: 10% 5%;
+}
+
+    .bookinfo .title {
+        font-size: 1.5rem;
+        line-height: 1.2;
+        margin-bottom: 5%;
+        color: #5a5a5a;
+    }
+
+    .bookinfo .author {
+        font-size: 1.03rem;
+        color: #ececec;
+        color: #8a8a8a;
+        font-style: normal;
+    }
+
+.book {
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* controls */
+.bookinfo {
+    position: relative;
+}
+
+ul.controls {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+}
+
+    ul.controls li {
+        color: red;
+        text-decoration: none;
+
+        list-style: none;
+        flex-basis: 33%;
+        flex-grow: 1;
+        display: flex;
+    }
+
+.controls a {
+    cursor: pointer;
+    display: block;
+    position: relative;
+    text-decoration: none;
+    margin: auto;
+    padding: 1rem 1rem;
+}
+
+    .controls a::after {
+        content: '';
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, .3);
+        transition: opacity 0.3s ease;
+    }
+
+.controls i {
+    max-width: 100%;
+    font-size: 2rem;
+    color: #2a2b38;
+}
+
