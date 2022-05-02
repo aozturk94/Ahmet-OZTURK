@@ -15,6 +15,5 @@ namespace DatabaseImageProject.Controllers
         {
             return View();
         }
-
     }
 }

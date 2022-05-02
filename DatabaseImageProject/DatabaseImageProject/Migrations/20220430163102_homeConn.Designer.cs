@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DatabaseImageProject.Migrations
 {
     [DbContext(typeof(ProductDbContext))]
-    [Migration("20220429161915_mig1")]
-    partial class mig1
+    [Migration("20220430163102_homeConn")]
+    partial class homeConn
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

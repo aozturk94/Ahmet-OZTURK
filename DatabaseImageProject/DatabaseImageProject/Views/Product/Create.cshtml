@@ -1,0 +1,32 @@
+﻿@model DatabaseImageProject.Models.Entities.Product
+
+    <div class="container pt-3">
+        <div class="d-flex justify-content-center">
+            <div class="pt-5 mt-1">
+                <label class="showImageLabel" style="display:none;">Selected Image</label>
+                <img id="showImage" />
+            </div>
+            <div class="col-sm-6">
+                <h1 class="display-4 text-center"><i class="fas fa-book-open text-primary"></i> <span class="text-secondary">Add</span> Book</h1>
+                <p class="text-center">Add your book information to store the it locally.</p>
+
+                <form class="book-form form" asp-action="Create" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label asp-for="ProductName" class="control-label">Title</label>
+                        <input type="text" asp-for="ProductName" class="form-control">
+                        <br>
+                        <label asp-for="ProductPrice" class="control-label">Price</label>
+                        <input type="number" asp-for="ProductPrice" placeholder="₺" class="form-control">
+                        <hr />
+                    </div>
+                    <div class="form-group">
+                        <label>Select an Image</label>
+                        <br />
+                        <input class="" type="file" name="file" onchange="readURL(this)" />
+                        <input type="submit" value="Save" class="btn btn-outline-warning">
+                        <a class="btn btn-warning" asp-action="Index">Back to Books Page</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>

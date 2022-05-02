@@ -2,7 +2,7 @@
 
 namespace DatabaseImageProject.Migrations
 {
-    public partial class mig1 : Migration
+    public partial class homeConn : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

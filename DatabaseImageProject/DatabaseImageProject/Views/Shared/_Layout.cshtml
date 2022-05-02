@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -6,38 +7,133 @@
     <title>@ViewData["Title"] - DatabaseImageProject</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+    <div class="section">
+        <div class="center-wrap text-center">
             <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">DatabaseImageProject</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>
+                <div class="row">
+                    <div class="col-12 text-center parallax-fade-top">
+                        <h1>LIBRARY</h1>
+                    </div>
                 </div>
             </div>
-        </nav>
+        </div>
+    </div>
+    <header class="cd-header">
+        <div class="header-wrapper">
+            <div class="logo-wrap">
+                <a asp-controller="Home" asp-action="Index" class="hover-target"><span>Wissen</span>Akademie</a>
+            </div>
+            <div class="nav-but-wrap">
+                <div class="menu-icon hover-target">
+                    <span class="menu-icon__line menu-icon__line-left"></span>
+                    <span class="menu-icon__line"></span>
+                    <span class="menu-icon__line menu-icon__line-right"></span>
+                </div>
+            </div>
+        </div>
     </header>
-    <div class="container">
+
+    <div class="nav">
+        <div class="nav__content">
+            <ul class="nav__list">
+
+                <li class="nav__list-item active-nav">
+                    <a class="hover-target" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                </li>
+                <li class="nav__list-item">
+                    <a class="hover-target" asp-area="" asp-controller="Product" asp-action="Index">Product</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section full-height over-hide">
+        <div class="switch-wrap">
+            <h1>@ViewData["Title"]</h1>
+            <div id="switch" class="hover-target">
+                <div id="circle"></div>
+            </div>
+            <p><span>dark</span> - <span>light</span></p>
+        </div>
+    </div>
+
+    <div class='cursor' id="cursor"></div>
+    <div class='cursor2' id="cursor2"></div>
+    <div class='cursor3' id="cursor3"></div>
+
+    <div class="">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
+    <footer class="container-fluid bg-grey py-5">
         <div class="container">
-            &copy; 2022 - DatabaseImageProject - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-6 ">
+                            <div class="logo-part">
+                                <img src="https://www.wissenakademie.com/Content/Site/images/newfooterlogo.png" class="w-50 logo-footer">
+                                <p>2017 © Tüm Hakları Saklıdır - Barbaros Bulvarı Yıldız İş Hanı No: 9 Kat: 3 Beşiktaş - İstanbul</p>
+                                <p>while (alive) { eat (); sleep (); code (); repeat (); } </p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 px-4">
+                            <h6> About Company</h6>
+                            <a href="#" class="btn-footer"> Privacy </a><br>
+                            <a href="#" class="btn-footer"> More Info </a><br>
+                            <a href="#" class="btn-footer">Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-6 px-4">
+                            <h6> Help us</h6>
+                            <div class="row ">
+                                <div class="col-md-6">
+                                    <ul>
+                                        <li> <a href="#"> Home</a> </li>
+                                        <li> <a href="#"> About</a> </li>
+                                        <li> <a href="#"> Service</a> </li>
+                                        <li> <a href="#"> Team</a> </li>
+                                        <li> <a href="#"> Help</a> </li>
+                                        <li> <a href="#"> Contact</a> </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6 px-4">
+                                    <ul>
+                                        <li> <a href="#"> Cab Faciliy</a> </li>
+                                        <li> <a href="#"> Fax</a> </li>
+                                        <li> <a href="#"> Terms</a> </li>
+                                        <li> <a href="#"> Policy</a> </li>
+                                        <li> <a href="#"> Refunds</a> </li>
+                                        <li> <a href="#"> Paypal</a> </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 ">
+                            <h6> Newsletter</h6>
+                            <div class="social">
+                                <a href="#"><i class="fa fa-brands fa-facebook-f"></i></a>
+                                <a href="#"><i class="fa fa-brands fa-instagram"></i></a>
+                                <a href="#"><i class="fa fa-brands fa-twitter"></i></a>
+                                <a href="#"><i class="fa fa-brands fa-github"></i></a>
+                            </div>
+                            <form class="form-footer my-3">
+                                <input type="text" placeholder="search here...." name="search">
+                                <input type="button" value="Go">
+                            </form>
+                            <p>That's technology limitation of FUTURE</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

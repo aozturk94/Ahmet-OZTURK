@@ -1,27 +1,21 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Web ve Mobil Öğle.DESKTOP-MTU4EKB\\Desktop\\PROJELER\\Ahmet-OZTURK\\DatabaseImageProject\\DatabaseImageProject\\DatabaseImageProject.csproj": {}
+    "C:\\Users\\Ahmet Ozturk\\Desktop\\Ahmet-OZTURK\\DatabaseImageProject\\DatabaseImageProject\\DatabaseImageProject.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Web ve Mobil Öğle.DESKTOP-MTU4EKB\\Desktop\\PROJELER\\Ahmet-OZTURK\\DatabaseImageProject\\DatabaseImageProject\\DatabaseImageProject.csproj": {
+    "C:\\Users\\Ahmet Ozturk\\Desktop\\Ahmet-OZTURK\\DatabaseImageProject\\DatabaseImageProject\\DatabaseImageProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Web ve Mobil Öğle.DESKTOP-MTU4EKB\\Desktop\\PROJELER\\Ahmet-OZTURK\\DatabaseImageProject\\DatabaseImageProject\\DatabaseImageProject.csproj",
+        "projectUniqueName": "C:\\Users\\Ahmet Ozturk\\Desktop\\Ahmet-OZTURK\\DatabaseImageProject\\DatabaseImageProject\\DatabaseImageProject.csproj",
         "projectName": "DatabaseImageProject",
-        "projectPath": "C:\\Users\\Web ve Mobil Öğle.DESKTOP-MTU4EKB\\Desktop\\PROJELER\\Ahmet-OZTURK\\DatabaseImageProject\\DatabaseImageProject\\DatabaseImageProject.csproj",
-        "packagesPath": "C:\\Users\\Web ve Mobil Öğle.DESKTOP-MTU4EKB\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Web ve Mobil Öğle.DESKTOP-MTU4EKB\\Desktop\\PROJELER\\Ahmet-OZTURK\\DatabaseImageProject\\DatabaseImageProject\\obj\\",
+        "projectPath": "C:\\Users\\Ahmet Ozturk\\Desktop\\Ahmet-OZTURK\\DatabaseImageProject\\DatabaseImageProject\\DatabaseImageProject.csproj",
+        "packagesPath": "C:\\Users\\Ahmet Ozturk\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Ahmet Ozturk\\Desktop\\Ahmet-OZTURK\\DatabaseImageProject\\DatabaseImageProject\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Web ve Mobil Öğle.DESKTOP-MTU4EKB\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\Ahmet Ozturk\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -85,7 +79,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.104\\RuntimeIdentifierGraph.json"
         }
       }
     }

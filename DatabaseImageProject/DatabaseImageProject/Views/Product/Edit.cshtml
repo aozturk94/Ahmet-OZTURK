@@ -1,0 +1,32 @@
+﻿@model DatabaseImageProject.Models.Entities.Product
+
+<h2 class="container display-3 text-center">Edit "@Model.ProductName"</h2>
+<hr>
+<div class="container pt-3">
+    <div class="d-flex">
+        <div class="col-sm-12">
+            <form asp-action="Edit" enctype="multipart/form-data" class="row">
+                <img src="@Model.ProductImage" class="p-3 col-md-6" />
+                <div class="form-group col-md-6">
+                    <label asp-for="ProductName" class="control-label"></label>
+                    <input type="text" asp-for="ProductName" class="form-control">
+                    <br>
+                    <label asp-for="ProductPrice" class="control-label"></label>
+                    <input type="text" asp-for="ProductPrice" class="form-control">
+                    <div class="form-group">
+                        <hr />
+                        <label>Select an Image</label>
+
+                        <br />
+                        <input type="file" name="file" onchange="readURL(this)" />
+                        <input type="hidden" asp-for="ProductId">
+                        <input type="submit" value="Save" class="btn btn-outline-warning">
+                        <a class="btn btn-warning" asp-action="Index">Back to Books Page</a>
+                    </div>
+                    <label class="showImageLabel" style="display:none;">Selected Image</label>
+                    <img id="showImage" />
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

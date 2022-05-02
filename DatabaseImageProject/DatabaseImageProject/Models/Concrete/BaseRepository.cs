@@ -1,54 +1,46 @@
 ﻿using DatabaseImageProject.Models.Abstract;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
+
 namespace DatabaseImageProject.Models.Concrete
 {
-    public class BaseRepository<T> : IRepository<T> where T : class
+    public class BaseRepository<T> : IRepository<T> where T : class, new()
     {
+        protected readonly DbContext _context;
+        public BaseRepository(DbContext context)
+        {
+            _context = context;
+        }
         public void Add(T entity)
         {
-            using (var _context = new ProductDbContext())
-            {
-                _context.Add(entity);
-                _context.SaveChanges();
-            }
+            _context.Add(entity);
+            _context.SaveChanges();
         }
 
         public void Delete(T entity)
         {
-            using (var _context = new ProductDbContext())
-            {
-                _context.Remove(entity);
-                _context.SaveChanges();
-            }
+            _context.Remove(entity);
+            _context.SaveChanges();
         }
 
         public List<T> GetAll()
         {
-            using (var _context = new ProductDbContext())
-            {
-                return _context.Set<T>().ToList();
-            }
+            return _context.Set<T>().ToList();
         }
 
-        public T GetSingle()
+        public T GetSingle(int id)
         {
-            using (var _context = new ProductDbContext())
-            {
-                return _context.Set<T>().FirstOrDefault();
-            }
+            return _context.Set<T>().Find(id);
         }
 
         public void Update(T entity)
         {
-            using (var _context = new ProductDbContext())
-            {
-                _context.Update(entity);
-                _context.SaveChanges();
-            }
+            _context.Update(entity).State = EntityState.Modified;
+            _context.SaveChanges();
         }
     }
 }
