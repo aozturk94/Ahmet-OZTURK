@@ -22,5 +22,10 @@ namespace StudentLessonApp.Models.Concrete
             }
         }
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<StudentLesson>().HasKey(sl => new { sl.StudentId, sl.LessonId });
+        }
+
     }
 }

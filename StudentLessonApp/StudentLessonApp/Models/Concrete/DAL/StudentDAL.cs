@@ -1,4 +1,5 @@
-﻿using StudentLessonApp.Models.Abstract;
+﻿using Microsoft.EntityFrameworkCore;
+using StudentLessonApp.Models.Abstract;
 using StudentLessonApp.Models.Entity;
 using System;
 using System.Collections.Generic;
@@ -7,15 +8,16 @@ using System.Threading.Tasks;
 
 namespace StudentLessonApp.Models.Concrete.DAL
 {
-    public class StudentDAL : BaseRepository<Student>
+    public class StudentDAL : BaseRepository<Student>, IStudentRepository
     {
-        public StudentDAL(StudentLessonAppDbContext context) : base(context)
+        public List<Student> GetWithDepartman()
         {
+            using (var _context = new StudentLessonAppDbContext())
+            {
+                return _context.Students.Include(s => s.Department).ToList();
+            }
+        }
 
-        }
-        private StudentLessonAppDbContext Context
-        {
-            get { return _context as StudentLessonAppDbContext; }
-        }
+
     }
 }

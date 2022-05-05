@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using StudentLessonApp.Models.Concrete;
 using StudentLessonApp.Models.Concrete.DAL;
 using StudentLessonApp.Models.Entity;
 using System;
@@ -12,8 +13,8 @@ namespace StudentLessonApp.Controllers
     {
         public IActionResult Index()
         {
-            var student = new Student();
-            return View(student.GetAll());
+            var model = new StudentDAL();
+            return View(model.GetAll());
         }
     }
 }

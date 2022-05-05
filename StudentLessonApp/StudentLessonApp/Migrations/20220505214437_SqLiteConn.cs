@@ -3,10 +3,24 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace StudentLessonApp.Migrations
 {
-    public partial class SqliteCon : Migration
+    public partial class SqLiteConn : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.CreateTable(
+                name: "Departments",
+                columns: table => new
+                {
+                    DepartmentId = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    DepartmentName = table.Column<string>(type: "TEXT", nullable: true),
+                    HeadOfDepartment = table.Column<string>(type: "TEXT", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Departments", x => x.DepartmentId);
+                });
+
             migrationBuilder.CreateTable(
                 name: "Lessons",
                 columns: table => new
@@ -15,8 +29,8 @@ namespace StudentLessonApp.Migrations
                         .Annotation("Sqlite:Autoincrement", true),
                     LessonName = table.Column<string>(type: "TEXT", nullable: true),
                     TeacherName = table.Column<string>(type: "TEXT", nullable: true),
-                    Credit = table.Column<int>(type: "INTEGER", nullable: false),
-                    Semester = table.Column<int>(type: "INTEGER", nullable: false)
+                    Credit = table.Column<sbyte>(type: "INTEGER", nullable: false),
+                    Semester = table.Column<sbyte>(type: "INTEGER", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -32,34 +46,19 @@ namespace StudentLessonApp.Migrations
                     No = table.Column<int>(type: "INTEGER", nullable: false),
                     FirstName = table.Column<string>(type: "TEXT", nullable: true),
                     LastName = table.Column<string>(type: "TEXT", nullable: true),
-                    DepartmentId = table.Column<string>(type: "TEXT", nullable: true),
                     BirthDate = table.Column<DateTime>(type: "TEXT", nullable: false),
                     EnrollDate = table.Column<DateTime>(type: "TEXT", nullable: false),
-                    Semester = table.Column<int>(type: "INTEGER", nullable: false)
+                    Semester = table.Column<sbyte>(type: "INTEGER", nullable: false),
+                    DepartmentId = table.Column<int>(type: "INTEGER", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Students", x => x.StudentId);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Departments",
-                columns: table => new
-                {
-                    DepartmentId = table.Column<int>(type: "INTEGER", nullable: false)
-                        .Annotation("Sqlite:Autoincrement", true),
-                    Departman = table.Column<string>(type: "TEXT", nullable: true),
-                    HeadOfDepartment = table.Column<string>(type: "TEXT", nullable: true),
-                    StudentId = table.Column<int>(type: "INTEGER", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Departments", x => x.DepartmentId);
                     table.ForeignKey(
-                        name: "FK_Departments_Students_StudentId",
-                        column: x => x.StudentId,
-                        principalTable: "Students",
-                        principalColumn: "StudentId",
+                        name: "FK_Students_Departments_DepartmentId",
+                        column: x => x.DepartmentId,
+                        principalTable: "Departments",
+                        principalColumn: "DepartmentId",
                         onDelete: ReferentialAction.Cascade);
                 });
 
@@ -67,14 +66,12 @@ namespace StudentLessonApp.Migrations
                 name: "StudentLessons",
                 columns: table => new
                 {
-                    StudentLessonId = table.Column<int>(type: "INTEGER", nullable: false)
-                        .Annotation("Sqlite:Autoincrement", true),
                     StudentId = table.Column<int>(type: "INTEGER", nullable: false),
                     LessonId = table.Column<int>(type: "INTEGER", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_StudentLessons", x => x.StudentLessonId);
+                    table.PrimaryKey("PK_StudentLessons", x => new { x.StudentId, x.LessonId });
                     table.ForeignKey(
                         name: "FK_StudentLessons_Lessons_LessonId",
                         column: x => x.LessonId,
@@ -90,27 +87,18 @@ namespace StudentLessonApp.Migrations
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Departments_StudentId",
-                table: "Departments",
-                column: "StudentId",
-                unique: true);
-
-            migrationBuilder.CreateIndex(
                 name: "IX_StudentLessons_LessonId",
                 table: "StudentLessons",
                 column: "LessonId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_StudentLessons_StudentId",
-                table: "StudentLessons",
-                column: "StudentId");
+                name: "IX_Students_DepartmentId",
+                table: "Students",
+                column: "DepartmentId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DropTable(
-                name: "Departments");
-
             migrationBuilder.DropTable(
                 name: "StudentLessons");
 
@@ -119,6 +107,9 @@ namespace StudentLessonApp.Migrations
 
             migrationBuilder.DropTable(
                 name: "Students");
+
+            migrationBuilder.DropTable(
+                name: "Departments");
         }
     }
 }

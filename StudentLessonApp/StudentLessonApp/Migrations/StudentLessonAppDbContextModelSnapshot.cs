@@ -22,19 +22,13 @@ namespace StudentLessonApp.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("Departman")
+                    b.Property<string>("DepartmentName")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("HeadOfDepartment")
                         .HasColumnType("TEXT");
 
-                    b.Property<int>("StudentId")
-                        .HasColumnType("INTEGER");
-
                     b.HasKey("DepartmentId");
-
-                    b.HasIndex("StudentId")
-                        .IsUnique();
 
                     b.ToTable("Departments");
                 });
@@ -45,13 +39,13 @@ namespace StudentLessonApp.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<int>("Credit")
+                    b.Property<sbyte>("Credit")
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("LessonName")
                         .HasColumnType("TEXT");
 
-                    b.Property<int>("Semester")
+                    b.Property<sbyte>("Semester")
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("TeacherName")
@@ -71,8 +65,8 @@ namespace StudentLessonApp.Migrations
                     b.Property<DateTime>("BirthDate")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("DepartmentId")
-                        .HasColumnType("TEXT");
+                    b.Property<int>("DepartmentId")
+                        .HasColumnType("INTEGER");
 
                     b.Property<DateTime>("EnrollDate")
                         .HasColumnType("TEXT");
@@ -86,44 +80,40 @@ namespace StudentLessonApp.Migrations
                     b.Property<int>("No")
                         .HasColumnType("INTEGER");
 
-                    b.Property<int>("Semester")
+                    b.Property<sbyte>("Semester")
                         .HasColumnType("INTEGER");
 
                     b.HasKey("StudentId");
+
+                    b.HasIndex("DepartmentId");
 
                     b.ToTable("Students");
                 });
 
             modelBuilder.Entity("StudentLessonApp.Models.Entity.StudentLesson", b =>
                 {
-                    b.Property<int>("StudentLessonId")
-                        .ValueGeneratedOnAdd()
+                    b.Property<int>("StudentId")
                         .HasColumnType("INTEGER");
 
                     b.Property<int>("LessonId")
                         .HasColumnType("INTEGER");
 
-                    b.Property<int>("StudentId")
-                        .HasColumnType("INTEGER");
-
-                    b.HasKey("StudentLessonId");
+                    b.HasKey("StudentId", "LessonId");
 
                     b.HasIndex("LessonId");
-
-                    b.HasIndex("StudentId");
 
                     b.ToTable("StudentLessons");
                 });
 
-            modelBuilder.Entity("StudentLessonApp.Models.Entity.Department", b =>
+            modelBuilder.Entity("StudentLessonApp.Models.Entity.Student", b =>
                 {
-                    b.HasOne("StudentLessonApp.Models.Entity.Student", "Student")
-                        .WithOne("Department")
-                        .HasForeignKey("StudentLessonApp.Models.Entity.Department", "StudentId")
+                    b.HasOne("StudentLessonApp.Models.Entity.Department", "Department")
+                        .WithMany("Student")
+                        .HasForeignKey("DepartmentId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Student");
+                    b.Navigation("Department");
                 });
 
             modelBuilder.Entity("StudentLessonApp.Models.Entity.StudentLesson", b =>
@@ -145,6 +135,11 @@ namespace StudentLessonApp.Migrations
                     b.Navigation("Student");
                 });
 
+            modelBuilder.Entity("StudentLessonApp.Models.Entity.Department", b =>
+                {
+                    b.Navigation("Student");
+                });
+
             modelBuilder.Entity("StudentLessonApp.Models.Entity.Lesson", b =>
                 {
                     b.Navigation("StudentLessons");
@@ -152,8 +147,6 @@ namespace StudentLessonApp.Migrations
 
             modelBuilder.Entity("StudentLessonApp.Models.Entity.Student", b =>
                 {
-                    b.Navigation("Department");
-
                     b.Navigation("StudentLessons");
                 });
 #pragma warning restore 612, 618
