@@ -37,7 +37,7 @@ namespace DatabaseImageProject.Controllers
                 string imageExtension = Path.GetExtension(file.FileName);
                 string imageName = Guid.NewGuid() + imageExtension;
                 string path = Path.Combine(Directory.GetCurrentDirectory(), $"wwwroot/images/{imageName}");
-                var stream = new FileStream(path, FileMode.Create);
+                using var stream = new FileStream(path, FileMode.Create);
                 file.CopyTo(stream);
                 product.ProductImage = $"/images/{imageName}";
             }

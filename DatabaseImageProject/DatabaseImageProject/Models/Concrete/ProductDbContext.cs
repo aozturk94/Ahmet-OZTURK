@@ -18,7 +18,7 @@ namespace DatabaseImageProject.Models.Concrete
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer("Server=OZTURK;Database=ProductDbAksam;User=sa;Pwd=123;");
+                optionsBuilder.UseSqlServer("Server=DESKTOP-MTU4EKB\\SQLEXPRESS;Database=ProductDbAksam;User=sa;Pwd=123;");
             }
         }
     }
