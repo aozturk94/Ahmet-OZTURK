@@ -4,9 +4,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace StudentLessonApp.Models.Abstract
+namespace StudentLessonApp.Models.Concrete.DAL
 {
-    interface ILessonRepository : IRepository<Lesson>
+    public class LessonDAL :BaseRepository<Lesson>
     {
     }
 }

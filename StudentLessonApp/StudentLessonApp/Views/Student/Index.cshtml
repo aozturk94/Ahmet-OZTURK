@@ -1,8 +1,28 @@
 ﻿@model List<StudentLessonApp.Models.Entity.Student>
 
-@foreach (var item in Model)
-{
-    <h1>@item.FirstName</h1>
-    <h1>@item.LastName</h1>
-    <h1>@item.No</h1>
-}
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>No</th>
+            <th>Ad</th>
+            <th>Soyad</th>
+            <th>Bölüm</th>
+        </tr>
+    </thead>
+    @foreach (var item in Model)
+    {
+        <tbody>
+            <tr>
+                <td>@item.No</td>
+                <td>@item.FirstName</td>
+                <td>@item.LastName</td>
+                <td>@item.Department.DepartmentName</td>
+                <td>
+                    <a asp-controller="Student" asp-action="AssignLesson" asp-route-id="@item.StudentId" class="btn btn-sm btn-primary">Assign Lesson</a>
+                </td>
+            </tr>
+        </tbody>
+    }
+
+</table>

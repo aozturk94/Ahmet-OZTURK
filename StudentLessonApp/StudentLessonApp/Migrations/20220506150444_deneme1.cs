@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace StudentLessonApp.Migrations
 {
-    public partial class SqLiteConn : Migration
+    public partial class deneme1 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

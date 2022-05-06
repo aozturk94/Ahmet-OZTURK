@@ -182,3 +182,4 @@ C:\Users\Ahmet Ozturk\Desktop\Ahmet-OZTURK\StudentLessonApp\StudentLessonApp\obj
 C:\Users\Ahmet Ozturk\Desktop\Ahmet-OZTURK\StudentLessonApp\StudentLessonApp\obj\Debug\net5.0\ref\StudentLessonApp.dll
 C:\Users\Ahmet Ozturk\Desktop\Ahmet-OZTURK\StudentLessonApp\StudentLessonApp\obj\Debug\net5.0\StudentLessonApp.pdb
 C:\Users\Ahmet Ozturk\Desktop\Ahmet-OZTURK\StudentLessonApp\StudentLessonApp\obj\Debug\net5.0\StudentLessonApp.genruntimeconfig.cache
+C:\Users\Web ve Mobil Öğle.DESKTOP-MTU4EKB\Desktop\PROJELER\Ahmet-OZTURK\StudentLessonApp\StudentLessonApp\obj\Debug\net5.0\Razor\Views\Student\AssignLesson.cshtml.g.cs

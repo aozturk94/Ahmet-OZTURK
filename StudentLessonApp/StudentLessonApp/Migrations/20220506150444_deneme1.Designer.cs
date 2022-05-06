@@ -9,8 +9,8 @@ using StudentLessonApp.Models.Concrete;
 namespace StudentLessonApp.Migrations
 {
     [DbContext(typeof(StudentLessonAppDbContext))]
-    [Migration("20220505214437_SqLiteConn")]
-    partial class SqLiteConn
+    [Migration("20220506150444_deneme1")]
+    partial class deneme1
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

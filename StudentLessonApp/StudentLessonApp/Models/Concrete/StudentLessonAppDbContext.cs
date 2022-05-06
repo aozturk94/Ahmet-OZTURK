@@ -21,11 +21,9 @@ namespace StudentLessonApp.Models.Concrete
                 optionsBuilder.UseSqlite("Data Source=StudentLessonDb");
             }
         }
-
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<StudentLesson>().HasKey(sl => new { sl.StudentId, sl.LessonId });
         }
-
     }
 }
