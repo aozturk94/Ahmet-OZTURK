@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using StudentLessonApp.Models;
 using StudentLessonApp.Models.Concrete;
 using StudentLessonApp.Models.Concrete.DAL;
@@ -40,13 +41,23 @@ namespace StudentLessonApp.Controllers
         }
 
         [HttpPost]
-        public IActionResult AssignLesson(int id, Student student)
+        public IActionResult AssignLesson(int id, int[] lessonids)
         {
-            var updateStudent = new StudentDAL();
-            updateStudent.Update(student);
-            return RedirectToAction("AssignLesson");
+            using (var _context = new StudentLessonAppDbContext())
+            {
+                Student student = _context.Students.Include(s => s.StudentLessons).First(l => l.DepartmentId == id);
+                if (student != null)
+                {
+                    student.StudentLessons = lessonids.Select(lsi => new StudentLesson()
+                    {
+                        LessonId = lsi,
+                        StudentId = id
+                    }).ToList();
 
-            //https://www.youtube.com/watch?v=1A3J3thVAvE&ab_channel=Sad%C4%B1kTuran
+                    _context.SaveChanges();
+                }
+                return RedirectToAction("Index");
+            }
         }
     }
 }
