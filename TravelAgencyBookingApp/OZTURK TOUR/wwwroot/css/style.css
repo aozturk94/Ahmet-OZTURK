@@ -174,7 +174,7 @@ body { background: var(--white); }
   top: 0;
   left: 0;
   width: 100%;
-  padding-top: 61px;
+  padding-top: 60px;
   z-index: 4;
 }
 
@@ -214,7 +214,7 @@ body { background: var(--white); }
 
 .header-top .logo { margin-inline: auto; }
 
-.header-top .logo img { max-width: 100px; }
+.header-top .logo img { max-width: 100px; max-height: 55px;}
 
 .header-btn-group {
   justify-self: flex-end;
