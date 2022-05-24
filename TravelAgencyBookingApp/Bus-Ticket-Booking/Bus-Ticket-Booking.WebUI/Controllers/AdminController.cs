@@ -1,4 +1,5 @@
 ﻿using Bus_Ticket_Booking.Business.Abstract;
+using Bus_Ticket_Booking.Entity;
 using Bus_Ticket_Booking.WebUI.Models;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -11,9 +12,11 @@ namespace Bus_Ticket_Booking.WebUI.Controllers
     public class AdminController : Controller
     {
         private ITicketService _ticketService;
-        public AdminController(ITicketService ticketService)
+        private IRouteService _routeService;
+        public AdminController(ITicketService ticketService, IRouteService routeService)
         {
             _ticketService = ticketService;
+            _routeService = routeService;
         }
         public IActionResult AdminList()
         {
@@ -31,6 +34,11 @@ namespace Bus_Ticket_Booking.WebUI.Controllers
                 _ticketService.Delete(ticket);
             }
             return RedirectToAction("AdminList");
+        }
+
+        public IActionResult CreateRoute()
+        {
+            return View(_routeService.GetAll());
         }
     }
 }

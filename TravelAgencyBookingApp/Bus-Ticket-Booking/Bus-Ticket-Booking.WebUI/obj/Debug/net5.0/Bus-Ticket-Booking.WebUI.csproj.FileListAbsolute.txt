@@ -149,3 +149,6 @@ C:\Users\Ahmet Ozturk\Desktop\Ahmet-OZTURK\TravelAgencyBookingApp\Bus-Ticket-Boo
 C:\Users\Ahmet Ozturk\Desktop\Ahmet-OZTURK\TravelAgencyBookingApp\Bus-Ticket-Booking\Bus-Ticket-Booking.WebUI\obj\Debug\net5.0\ref\Bus-Ticket-Booking.WebUI.dll
 C:\Users\Ahmet Ozturk\Desktop\Ahmet-OZTURK\TravelAgencyBookingApp\Bus-Ticket-Booking\Bus-Ticket-Booking.WebUI\obj\Debug\net5.0\Bus-Ticket-Booking.WebUI.pdb
 C:\Users\Ahmet Ozturk\Desktop\Ahmet-OZTURK\TravelAgencyBookingApp\Bus-Ticket-Booking\Bus-Ticket-Booking.WebUI\obj\Debug\net5.0\Bus-Ticket-Booking.WebUI.genruntimeconfig.cache
+C:\Users\Ahmet Ozturk\Desktop\Ahmet-OZTURK\TravelAgencyBookingApp\Bus-Ticket-Booking\Bus-Ticket-Booking.WebUI\obj\Debug\net5.0\Razor\Views\Home\Route.cshtml.g.cs
+C:\Users\Ahmet Ozturk\Desktop\Ahmet-OZTURK\TravelAgencyBookingApp\Bus-Ticket-Booking\Bus-Ticket-Booking.WebUI\obj\Debug\net5.0\Razor\Views\Admin\CreateRoute.cshtml.g.cs
+C:\Users\Ahmet Ozturk\Desktop\Ahmet-OZTURK\TravelAgencyBookingApp\Bus-Ticket-Booking\Bus-Ticket-Booking.WebUI\obj\Debug\net5.0\Razor\Views\Home\Search.cshtml.g.cs

@@ -18,6 +18,7 @@ namespace Bus_Ticket_Booking.Business.Abstract
         int GetSeatNumber(int routeId);
         List<int> GetSeat(int routeId);
         Ticket GetLastTicket();
+        Ticket GetTicket(int PrnNumber);
         int GetId();
         string GetDate(int id);
         string GetTime(int id);

@@ -1,0 +1,54 @@
+﻿@model RouteTicket
+
+@if (Model != null)
+{
+    <h3 class="text-center mt-4">Your Ticket</h3>
+    <br />
+
+                    <div class="ticket container">
+                        <div class="left my-3 mx-1">
+                            <div class="image">
+                            </div>
+                            <div class="ticket-info">
+                                <p class="date">
+                                    <span>DATE</span>
+                                    <span class="june-29">@Model.Date</span>
+                                    <span><small class="text-muted">Time: @Model.Time</small></span>
+                                </p>
+                                <div class="show-name">
+                                    <h1>Costumer: </h1>
+                                    <h2>@Model.Ticket.CostumerName @Model.Ticket.CosturmerSurname</h2>
+                                </div>
+                                <div class="time">
+                                    <p>Price:<span> ₺@Model.Ticket.Price</span></p>
+                                    <p>DOORS <span>*</span> 7:00 PM</p>
+                                </div>
+                                <p class="location">
+                                    <span>East High School</span>
+                                    <span class="separator"><i class="far fa-smile"></i></span><span>Salt Lake City, Utah</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <div class="right-info-container">
+                                <div class="time">
+                                    <p>8:00 PM <span>TO</span> 11:00 PM</p>
+                                    <p>DOORS <span>*</span> 7:00 PM</p>
+                                </div>
+                                <div class="barcode">
+                                    <img src="https://external-preview.redd.it/cg8k976AV52mDvDb5jDVJABPrSZ3tpi1aXhPjgcDTbw.png?auto=webp&s=1c205ba303c1fa0370b813ea83b9e1bddb7215eb" alt="QR code">
+                                </div>
+                                <p class="ticket-number">
+                                    #@Model.Ticket.PeronNumber
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                                }
+                                else
+                                {
+                                    <h2>Hopp</h2>
+                                }
+
+
+

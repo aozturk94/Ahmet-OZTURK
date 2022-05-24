@@ -50,6 +50,8 @@ namespace Bus_Ticket_Booking.WebUI.Controllers
         [HttpPost]
         public IActionResult Details(int routeId, double price, string startLocation, string endLocation, int seatNumber, string phoneNumber, string firstName, string lastName)
         {
+            Random rnd = new Random();
+            int PrnNumber = rnd.Next();
             var entity = new Ticket()
             {
                 CostumerName = firstName,
@@ -59,7 +61,8 @@ namespace Bus_Ticket_Booking.WebUI.Controllers
                 TravelTo = endLocation,
                 SeatNumber = seatNumber,
                 Price = price,
-                RouteId = routeId
+                RouteId = routeId,
+                PeronNumber = PrnNumber
             };
 
             _ticketService.Create(entity);

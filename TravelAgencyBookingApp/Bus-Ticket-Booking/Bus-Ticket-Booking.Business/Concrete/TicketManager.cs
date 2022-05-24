@@ -70,5 +70,10 @@ namespace Bus_Ticket_Booking.Business.Concrete
         {
             _ticketRepository.Update(entity);
         }
+
+        public Ticket GetTicket(int PrnNumber)
+        {
+            return _ticketRepository.GetTicket(PrnNumber);
+        }
     }
 }

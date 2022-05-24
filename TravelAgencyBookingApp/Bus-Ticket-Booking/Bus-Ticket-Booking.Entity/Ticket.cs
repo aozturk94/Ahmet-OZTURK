@@ -16,6 +16,7 @@ namespace Bus_Ticket_Booking.Entity
         public string TravelTo { get; set; }
         public int SeatNumber { get; set; }
         public double Price { get; set; }
+        public int PeronNumber { get; set; }
         public int RouteId { get; set; }
         public Route Route { get; set; }
     }

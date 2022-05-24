@@ -1,0 +1,28 @@
+﻿@model RouteTicket
+
+
+
+<div class="container">
+    @if (Model != null)
+    {
+        <div class="row">
+            @foreach (var item in @Model.Routes)
+            {
+
+                <div class="col-md">
+                    @await Html.PartialAsync("_Route", item)
+
+                </div>
+            }
+        </div>
+    }
+    else
+    {
+        <div class="col-md-6">
+
+            <h2>Hoopp</h2>
+
+        </div>
+    }
+</div>
+

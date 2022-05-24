@@ -15,5 +15,6 @@ namespace Bus_Ticket_Booking.Data.Abstract
         int GetId();
         string GetDate(int routeid);
         string GetTime(int routeid);
+        Ticket GetTicket(int PrnNumber);
     }
 }

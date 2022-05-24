@@ -83,5 +83,18 @@ namespace Bus_Ticket_Booking.Data.Concrete.EfCore
                     .Count();
             }
         }
+
+        public Ticket GetTicket(int PrnNumber)
+        {
+            using (var context = new BookingContext())
+            {
+                var ticket = context
+                    .Tickets
+                    .Where(i => i.PeronNumber == PrnNumber)
+                    .FirstOrDefault();
+
+                return ticket;
+            }
+        }
     }
 }

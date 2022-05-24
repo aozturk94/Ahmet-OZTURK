@@ -90,6 +90,9 @@ namespace Bus_Ticket_Booking.Data.Migrations
                     b.Property<string>("CosturmerSurname")
                         .HasColumnType("TEXT");
 
+                    b.Property<int>("PeronNumber")
+                        .HasColumnType("INTEGER");
+
                     b.Property<string>("PhoneNumber")
                         .HasColumnType("TEXT");
 
