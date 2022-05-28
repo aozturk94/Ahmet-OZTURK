@@ -12,3 +12,4 @@ namespace Bus_Ticket_Booking.Data.Concrete.EfCore
     {
     }
 }
+ 

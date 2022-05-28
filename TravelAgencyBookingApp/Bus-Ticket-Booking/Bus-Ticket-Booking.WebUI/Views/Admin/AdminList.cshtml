@@ -2,29 +2,46 @@
 
 
 
-<div class="row" style="margin: 5rem">
-    <div class="col-md-12">
-        <h1 class="h3"> Bilet Kontrol</h1> <hr /> <br />
-        <table class="table table table-bordered shadow-sm mt-3">
-            <thead>
-                <tr>
-                    <th style="width:20px;">BiletID</th>
-                    <th style="width:145px;">Ad - Soyad</th>
-                    <th style="">Tel</th>
-                    <th>Peron Number</th>
-                    <th style="width:25px;">Başlangıç</th>
-                    <th style="width:25px;">Bitiş</th>
-                    <th style="width:70px;">KoltukNo</th>
-                    <th style="width:80px;">Fiyat</th>
-                    <th style="width:85px;">GüzergahNo</th>
-                    <th style="width:165px;">İptal</th>
-                </tr>
-            </thead>
-            <tbody>
-                @if (Model.Tickets.Count > 0)
-                {
-    @foreach (var item in Model.Tickets)
-    {
+<div class="container-fluid mt-3">
+    <div class="row">
+        <div class="col-sm-2 mt-3 bg-primary">
+            <ul class="text-center">
+                <li class="nav__item">
+                    <a class="nav__link" asp-controller="Home" asp-action="Index">Home</a>
+                </li>
+                <li class="nav__item mt-4">
+                    <a class="nav__link" asp-controller="Admin" asp-action="ListRoute">List Route</a>
+                </li>
+                <li class="nav__item mt-4">
+                    <a class="nav__link" asp-controller="Admin" asp-action="">Route</a>
+                </li>
+                <li class="nav__item mt-4">
+                    <a class="nav__link" asp-controller="" asp-action="">ÇIKIŞ</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="col-md-10">
+            <h1 class="h3"> Bilet Kontrol</h1> <hr /> <br />
+            <table class="table table table-bordered shadow-sm mt-3">
+                <thead>
+                    <tr>
+                        <th style="width:20px;">BiletID</th>
+                        <th style="width:145px;">Ad - Soyad</th>
+                        <th style="">Tel</th>
+                        <th>Peron Number</th>
+                        <th style="width:25px;">Başlangıç</th>
+                        <th style="width:25px;">Bitiş</th>
+                        <th style="width:70px;">KoltukNo</th>
+                        <th style="width:80px;">Fiyat</th>
+                        <th style="width:85px;">GüzergahNo</th>
+                        <th style="width:165px;">İptal</th>
+                    </tr>
+                <tbody>
+                    @if (Model.Tickets.Count > 0)
+                    {
+        @foreach (var item in Model.Tickets)
+        {
 <tr>
     <td>@item.TicketId</td>
     <td>@item.CostumerName @item.CosturmerSurname</td>
@@ -40,13 +57,18 @@
             <input type="hidden" name="ticketId" value="@item.TicketId" />
             <button type="submit" class="btn btn-danger btn-md mr-2" style="color: white;">Bileti İptal Et</button>
         </form>
+
     </td>
 </tr>} }
-                else
-                {
-    <p>Sistemde henüz kayıtlı bilet yok!</p>}
-            </tbody>
+    else
+    {
+<tr>
+    <td>Sistemde henüz kayıtlı bilet yok!</td>
+</tr>}
+                </tbody>
 
-        </table>
+            </table>
+        </div>
+
     </div>
 </div>

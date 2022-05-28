@@ -1,50 +1,49 @@
 ﻿@model Route
 
-<h5 class="display-4 container">Create Route</h5>
+<h5 class="display-4">Edit Route</h5>
 <hr />
-<form asp-controller="Admin" asp-action="CreateRoute" method="post" class="container">
+<form asp-controller="Admin" asp-action="EditRoute" method="post" class="container">
     <div class="row">
-        <div class="col-md-8">
+        <div class="col-md-12">
             <div class="form-group row mb-2">
                 <label class="col-form-label col-sm-3">Start Location:</label>
                 <div class="col-sm-9">
-                    <select name="startLocation" class="form-select" id="from-place" asp-items="@ViewBag.Cities">
+                    <select asp-for="StartLocation" class="form-select" id="from-place" asp-items="@ViewBag.Cities">
                         <option selected disabled></option>
                     </select>
                 </div>
             </div>
 
             <div class="form-group row mb-2">
-                <label class="col-form-label col-sm-3">First Station:</label>
+                <label class="col-form-label col-sm-3">Start Location:</label>
                 <div class="col-sm-9">
-                    <select name="FirstStation" class="form-select" id="from-place" asp-items="@ViewBag.Cities">
+                    <select asp-for="FirstStation" class="form-select" id="from-place" asp-items="@ViewBag.Cities">
                         <option selected disabled></option>
                     </select>
                 </div>
             </div>
 
             <div class="form-group row mb-2">
-                <label class="col-form-label col-sm-3">Second Station:</label>
+                <label class="col-form-label col-sm-3">Start Location:</label>
                 <div class="col-sm-9">
-                    <select name="SecondStation" class="form-select" id="from-place" asp-items="@ViewBag.Cities">
+                    <select asp-for="SecondStation" class="form-select" id="from-place" asp-items="@ViewBag.Cities">
                         <option selected disabled></option>
                     </select>
                 </div>
             </div>
 
             <div class="form-group row mb-2">
-                <label class="col-form-label col-sm-3">Third Station:</label>
+                <label class="col-form-label col-sm-3">Start Location:</label>
                 <div class="col-sm-9">
-                    <select name="ThirdStation" class="form-select" id="from-place" asp-items="@ViewBag.Cities">
+                    <select asp-for="ThirdStation" class="form-select" id="from-place" asp-items="@ViewBag.Cities">
                         <option selected disabled></option>
                     </select>
                 </div>
             </div>
-
             <div class="form-group row mb-2">
-                <label class="col-form-label col-sm-3">End Station:</label>
+                <label class="col-form-label col-sm-3">Start Location:</label>
                 <div class="col-sm-9">
-                    <select name="EndLocation" class="form-select" id="from-place" asp-items="@ViewBag.Cities">
+                    <select asp-for="EndLocation" class="form-select" id="from-place" asp-items="@ViewBag.Cities">
                         <option selected disabled></option>
                     </select>
                 </div>
@@ -52,7 +51,7 @@
             <div class="form-group row mb-2">
                 <label class="col-form-label col-sm-3">Date</label>
                 <div class="col-sm-9">
-                    <input type="date" name="Date" value="" class="form-control" min="01.01.1990" max="31.12.2050"/>
+                    <input type="date" asp-for="Date"  class="form-control" min="01.01.1990" max="31.12.2050" />
                 </div>
             </div>
 
@@ -60,23 +59,23 @@
             <div class="form-group row mb-2">
                 <label class="col-form-label col-sm-3">Time:</label>
                 <div class="col-sm-9">
-                    <input type="time" class="form-control" name="Time" value="" />
+                    <input type="time" class="form-control" asp-for="Time"  />
                 </div>
             </div>
 
             <div class="form-group row mb-2">
                 <label class="col-form-label col-sm-3">Price:</label>
                 <div class="col-sm-9">
-                    <input type="text" class="form-control" name="Price" value="" placeholder="₺" />
+                    <input type="text" class="form-control" asp-for="Price" placeholder="₺" />
                 </div>
             </div>
 
             <div class="form-group row mb-2">
                 <div class="col-sm-9">
+                    <input type="hidden" name="RouteId" value="@Model.RouteId" />
                     <button type="submit" class="btn btn-primary">Save Route</button>
                 </div>
             </div>
         </div>
     </div>
 </form>
-

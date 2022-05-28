@@ -48,7 +48,11 @@ namespace Bus_Ticket_Booking.Data.Concrete.EfCore
 
         public void Update(TEntity entity)
         {
-            throw new NotImplementedException();
+            using (var context = new TContext())
+            {
+                context.Set<TEntity>().Update(entity);
+                context.SaveChanges();
+            }
         }
     }
 }

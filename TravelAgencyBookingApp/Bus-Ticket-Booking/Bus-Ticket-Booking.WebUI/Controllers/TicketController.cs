@@ -28,7 +28,7 @@ namespace Bus_Ticket_Booking.WebUI.Controllers
             int seatNumber = _ticketService.GetSeatNumber(id);
             List<int> takenSeat = _ticketService.GetSeat(id);
             List<int> seatNumbers = new List<int>();
-            int seats = _busService.GetSeatCapacity(id);
+            int seats = _busService.GetSeatCapacity(id/id);
 
             for (int i = 1; i <= seats; i++)
             {
