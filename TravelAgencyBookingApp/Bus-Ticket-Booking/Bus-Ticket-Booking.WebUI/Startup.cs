@@ -2,9 +2,14 @@ using Bus_Ticket_Booking.Business.Abstract;
 using Bus_Ticket_Booking.Business.Concrete;
 using Bus_Ticket_Booking.Data.Abstract;
 using Bus_Ticket_Booking.Data.Concrete.EfCore;
+using Bus_Ticket_Booking.WebUI.EmailServices;
+using Bus_Ticket_Booking.WebUI.Identity;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -38,6 +43,58 @@ namespace Bus_Ticket_Booking.WebUI
             services.AddScoped<IRouteService, RouteManager>();
             services.AddScoped<ITicketService, TicketManager>();
             services.AddScoped<IBusService, BusManager>();
+
+            services.AddDbContext<ApplicationContext>(options => options.UseSqlite("Data Source=BookingDb"));
+
+            services.AddIdentity<User, IdentityRole>().AddEntityFrameworkStores<ApplicationContext>().AddDefaultTokenProviders();
+
+            services.Configure<IdentityOptions>(options =>
+            {
+                //Password
+                options.Password.RequireDigit = true;
+                options.Password.RequireLowercase = true;
+                options.Password.RequireUppercase = true;
+                options.Password.RequireNonAlphanumeric = true;
+                options.Password.RequiredLength = 6;
+
+                //Lockout
+                options.Lockout.MaxFailedAccessAttempts = 3;
+                options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(5);
+
+                //User
+                options.User.RequireUniqueEmail = true;
+
+                //SignIn
+                options.SignIn.RequireConfirmedEmail = true;
+
+
+            });
+
+            services.ConfigureApplicationCookie(options => {
+                options.LoginPath = "/account/login";
+                options.LogoutPath = "/account/logout";
+                options.AccessDeniedPath = "/account/accessdenied";
+
+                options.SlidingExpiration = true;
+                options.ExpireTimeSpan = TimeSpan.FromMinutes(20);
+
+                options.Cookie = new CookieBuilder()
+                {
+                    HttpOnly = true,
+                    Name = "MiniShopApp.Security.Cookie",
+                    SameSite = SameSiteMode.Strict
+                };
+
+            });
+
+            services.AddScoped<IEmailSender, SmtpEmailSender>(i => new SmtpEmailSender(
+                Configuration["EmailSender:Host"],
+                Configuration.GetValue<int>("EmailSender:Port"),
+                Configuration.GetValue<bool>("EmailSender:EnableSSL"),
+                Configuration["EmailSender:UserName"],
+                Configuration["EmailSender:Password"]
+                ));
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

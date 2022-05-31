@@ -25,7 +25,7 @@ namespace Bus_Ticket_Booking.Data.Concrete.EfCore
 
         public List<Route> GetRoute(string startLocation, string endLocation, DateTime Date)
         {
-            string dateTimeLocal = Date.ToString("dd.MM.yyyy");
+            string dateTimeLocal = Date.ToString("yyyy-MM-dd");
             using (var context = new BookingContext())
             {
                 var start = context.Cities
