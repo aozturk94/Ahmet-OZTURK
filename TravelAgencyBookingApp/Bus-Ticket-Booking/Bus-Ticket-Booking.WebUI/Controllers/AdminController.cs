@@ -1,6 +1,7 @@
 ﻿using Bus_Ticket_Booking.Business.Abstract;
 using Bus_Ticket_Booking.Entity;
 using Bus_Ticket_Booking.WebUI.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System;
@@ -22,6 +23,7 @@ namespace Bus_Ticket_Booking.WebUI.Controllers
             _cityService = cityService;
         }
 
+        [Authorize]
         public IActionResult AdminList()
         {
             return View(new RouteTicket()

@@ -81,7 +81,7 @@ namespace Bus_Ticket_Booking.WebUI
                 options.Cookie = new CookieBuilder()
                 {
                     HttpOnly = true,
-                    Name = "MiniShopApp.Security.Cookie",
+                    Name = "Oztur.Security.Cookie",
                     SameSite = SameSiteMode.Strict
                 };
 

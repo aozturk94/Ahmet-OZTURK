@@ -36,9 +36,34 @@
                     <li class="nav__item">
                         <a href="#discover" class="nav__link">Discover</a>
                     </li>
-                    <li class="nav__item">
-                        <a class="nav__link" asp-controller="Admin" asp-action="AdminList">Admin</a>
-                    </li>
+
+
+                        <li class="nav__item">
+                            <a class="nav__link" asp-controller="Admin" asp-action="AdminList">Admin</a>
+                        </li>
+                
+
+                    <div class="nav__menu" id="nav-menu">
+                        <ul class="nav__list">
+    
+                                <li class="nav__item">
+                                    <a href="/account/login" class="nav__link">Login</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/account/register" class="nav__link">Register</a>
+                                </li>
+                    
+
+                                <li class="nav__item">
+                                    <a href="/account/login" class="nav__link">@User.Identity.Name</a>
+                                </li>
+                                <li class="nav__item">
+                                    <a href="/account/logout" class="nav__link">Logout</a>
+                                </li>
+                            
+                        </ul>
+                    </div>
+
                     <div class="nav__dark">
                         <!-- Theme change button -->
                         <span class="change-theme-name">Dark mode</span>
@@ -57,9 +82,19 @@
         </nav>
     </header>
 
-
-        <!--==================== HOME ====================-->
-       @RenderBody()
+    @if (TempData["Message"] != null)
+    {
+        var message = JsonConvert.DeserializeObject<AlertMessage>(TempData["Message"] as String);
+        <div class="row">
+            <div class="col-md-12 alert">
+                <div class="alert alert-@message.AlertType">
+                    @message.Message
+                </div>
+            </div>
+        </div>
+    }
+    <!--==================== HOME ====================-->
+    @RenderBody()
 
 
     <!--==================== FOOTER ====================-->
