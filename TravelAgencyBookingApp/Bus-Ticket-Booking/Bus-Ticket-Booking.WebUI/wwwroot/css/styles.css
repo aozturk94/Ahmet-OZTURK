@@ -1063,13 +1063,13 @@ input {
 }
 
 .tab-content input{
-  background: rgba(0, 0, 0, 0.05);
+
   border: none;
   box-shadow: none;
-  font-weight: bold;
-  font-size: 14px;
-  padding: 10px 10px !important;
-  color: #F78536 !important;
+
+  font-size: 17px;
+
+
 }
  .tab-content .button {
   border: 1px solid var(--first-color-alt) !important;
@@ -1246,4 +1246,20 @@ input {
 
 .right .ticket-number {
     color: gray;
+}
+
+.seat-icon {
+    max-width: 20px;
+    max-height: 20px;
+}
+
+.button-sec {
+    background-color: #2dc44d !important;
+    color: white !important;
+}
+
+.route-title {
+    text-decoration: none !important;
+    font-weight: bold !important;
+    color: black !important;
 }

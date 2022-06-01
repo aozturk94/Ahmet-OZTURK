@@ -63,7 +63,7 @@ namespace Bus_Ticket_Booking.Data.Concrete.EfCore
 
         private static Ticket[] Tickets =
         {
-            new Ticket() { CostumerName = "Ahmet", CosturmerSurname = "ÖZTÜRK", PhoneNumber = "+905315076460", TravelFrom = "İstanbul", TravelTo = "Isparta", SeatNumber = 11, Price=110, RouteId = 1}
+            new Ticket() { CostumerName = "Ahmet", CosturmerSurname = "ÖZTÜRK", PhoneNumber = "+905315076460", TravelFrom = "İstanbul", TravelTo = "Isparta", SeatNumber = 11, Price=300, PeronNumber= 5554752, RouteId = 1}
         };
     }
 }

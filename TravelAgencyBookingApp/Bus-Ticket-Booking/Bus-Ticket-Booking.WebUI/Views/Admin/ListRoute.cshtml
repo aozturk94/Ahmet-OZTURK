@@ -1,6 +1,6 @@
 ﻿@model RouteTicket
 
-<div class="container">
+<div class="container mt-4">
     <div class="col-sm-12">
         <h1 class="h3">Bilet Kontrol</h1> <hr />
 
@@ -19,7 +19,7 @@
                     <th>Date</th>
                     <th>Time</th>
                     <th>Price</th>
-                    <th>Delete</th>
+                    <th width="165">Action</th>
                 </tr>
             <tbody>
                 @if (Model.Routes.Count > 0)
@@ -37,10 +37,10 @@
         <td>@item.Time</td>
         <td>@item.Price ₺</td>
         <td>
-            <a asp-action="EditRoute" asp-route-id="@item.RouteId" class="btn btn-sm btn-primary mr-1">Edit</a>
+            <a asp-action="EditRoute" asp-route-id="@item.RouteId" class="btn btn-sm btn-primary">Edit</a>
             <form action="DeleteRoute" method="POST" style="display:inline;">
                 <input type="hidden" name="routeId" value="@item.RouteId" />
-                <button type="submit" class="btn btn-danger btn-md mr-2" style="color: white;">Delete Route</button>
+                <button type="submit" class="btn btn-danger btn-sm" style="color: white;">Delete Route</button>
             </form>
 
         </td>
