@@ -75,8 +75,7 @@ namespace Bus_Ticket_Booking.WebUI
                 options.LogoutPath = "/account/logout";
                 options.AccessDeniedPath = "/account/accessdenied";
 
-                options.SlidingExpiration = true;
-                options.ExpireTimeSpan = TimeSpan.FromMinutes(20);
+
 
                 options.Cookie = new CookieBuilder()
                 {
@@ -84,7 +83,8 @@ namespace Bus_Ticket_Booking.WebUI
                     Name = "Oztur.Security.Cookie",
                     SameSite = SameSiteMode.Strict
                 };
-
+                options.SlidingExpiration = true;
+                options.ExpireTimeSpan = TimeSpan.FromMinutes(20);
             });
 
             services.AddScoped<IEmailSender, SmtpEmailSender>(i => new SmtpEmailSender(
@@ -120,6 +120,13 @@ namespace Bus_Ticket_Booking.WebUI
 
             app.UseEndpoints(endpoints =>
             {
+                endpoints.MapControllerRoute(
+                    name: "adminlist",
+                    pattern: "admin/adminlist",
+                    defaults: new { controller = "Admin", action = "AdminList" }
+                    );
+
+
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
