@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace Bus_Ticket_Booking.WebUI.Controllers
 {
-    [Authorize]
+    //[Authorize]
     public class AdminController : Controller
     {
         private ITicketService _ticketService;
@@ -24,7 +24,7 @@ namespace Bus_Ticket_Booking.WebUI.Controllers
             _cityService = cityService;
         }
 
-        
+  
         public IActionResult AdminList()
         {
             return View(new RouteTicket()

@@ -873,6 +873,7 @@ input {
   .nav__list {
     flex-direction: row;
     column-gap: 4rem;
+    margin-bottom: 0px!important;
   }
   .nav__toggle, .nav__close {
     display: none;

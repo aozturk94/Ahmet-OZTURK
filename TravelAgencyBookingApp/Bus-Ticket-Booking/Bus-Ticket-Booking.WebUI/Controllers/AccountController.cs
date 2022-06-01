@@ -30,8 +30,7 @@ namespace Bus_Ticket_Booking.WebUI.Controllers
         }
         public IActionResult Login()
         {
-            LoginModel loginModel = new LoginModel();
-            return View(loginModel);
+            return View();
         }
         [HttpPost]
         public async Task<IActionResult> Login(LoginModel model)
