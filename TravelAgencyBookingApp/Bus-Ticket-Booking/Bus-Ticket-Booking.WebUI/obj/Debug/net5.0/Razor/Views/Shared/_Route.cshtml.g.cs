@@ -40,8 +40,15 @@ using Newtonsoft.Json;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 5 "C:\Users\Wissen\Desktop\Ahmet-OZTURK\TravelAgencyBookingApp\Bus-Ticket-Booking\Bus-Ticket-Booking.WebUI\Views\_ViewImports.cshtml"
+using Microsoft.AspNetCore.Identity;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"4b8544fc1da8b0a7898b70e779c752d3d28e281c", @"/Views/Shared/_Route.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"24bc4c41f081dad977726564d7837b3fb8df39dd", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"5cfccfdd104006d7b9fc572a0cdbe224c801461e", @"/Views/_ViewImports.cshtml")]
     public class Views_Shared__Route : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<Route>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-controller", "Route", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -89,7 +96,7 @@ using Newtonsoft.Json;
 #line hidden
 #nullable disable
             WriteLiteral("<div class=\"card shadow w-100 mt-5\">\r\n    <div class=\"card-body row align-items-center\">\r\n        <div class=\"col-sm-6 card-text\">\r\n            ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4b8544fc1da8b0a7898b70e779c752d3d28e281c7007", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4b8544fc1da8b0a7898b70e779c752d3d28e281c7255", async() => {
 #nullable restore
 #line 11 "C:\Users\Wissen\Desktop\Ahmet-OZTURK\TravelAgencyBookingApp\Bus-Ticket-Booking\Bus-Ticket-Booking.WebUI\Views\Shared\_Route.cshtml"
                                                                                                                    Write(Model.StartLocation);
@@ -177,7 +184,7 @@ using Newtonsoft.Json;
 #line hidden
 #nullable disable
             WriteLiteral("</p>\r\n        </div>\r\n        <div class=\"col-sm-1 card-text p-2 text-center\">\r\n            ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "4b8544fc1da8b0a7898b70e779c752d3d28e281c12209", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "4b8544fc1da8b0a7898b70e779c752d3d28e281c12457", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -217,7 +224,7 @@ using Newtonsoft.Json;
 #line hidden
 #nullable disable
             WriteLiteral(" <i class=\"fa-solid fa-turkish-lira-sign\"></i></h5>\r\n            </div>\r\n\r\n                ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4b8544fc1da8b0a7898b70e779c752d3d28e281c14617", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4b8544fc1da8b0a7898b70e779c752d3d28e281c14865", async() => {
                 WriteLiteral("Pre-Book");
             }
             );
