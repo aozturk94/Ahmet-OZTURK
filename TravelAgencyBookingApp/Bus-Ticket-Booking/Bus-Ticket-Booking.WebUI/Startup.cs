@@ -32,18 +32,6 @@ namespace Bus_Ticket_Booking.WebUI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllersWithViews();
-
-            services.AddScoped<ICityRepository, EfCoreCityRepository>();
-            services.AddScoped<IRouteRepository, EfCoreRouteRepository>();
-            services.AddScoped<ITicketRepository, EfCoreTicketRepository>();
-            services.AddScoped<IBusRepository, EfCoreBusRepository>();
-
-            services.AddScoped<ICityService, CityManager>();
-            services.AddScoped<IRouteService, RouteManager>();
-            services.AddScoped<ITicketService, TicketManager>();
-            services.AddScoped<IBusService, BusManager>();
-
             services.AddDbContext<ApplicationContext>(options => options.UseSqlite("Data Source=BookingDb"));
 
             services.AddIdentity<User, IdentityRole>().AddEntityFrameworkStores<ApplicationContext>().AddDefaultTokenProviders();
@@ -70,12 +58,13 @@ namespace Bus_Ticket_Booking.WebUI
 
             });
 
-            services.ConfigureApplicationCookie(options => {
+            services.ConfigureApplicationCookie(options => 
+            {
                 options.LoginPath = "/account/login";
                 options.LogoutPath = "/account/logout";
                 options.AccessDeniedPath = "/account/accessdenied";
-
-
+                options.SlidingExpiration = true;
+                options.ExpireTimeSpan = TimeSpan.FromMinutes(20);
 
                 options.Cookie = new CookieBuilder()
                 {
@@ -83,8 +72,7 @@ namespace Bus_Ticket_Booking.WebUI
                     Name = "Oztur.Security.Cookie",
                     SameSite = SameSiteMode.Strict
                 };
-                options.SlidingExpiration = true;
-                options.ExpireTimeSpan = TimeSpan.FromMinutes(20);
+
             });
 
             services.AddScoped<IEmailSender, SmtpEmailSender>(i => new SmtpEmailSender(
@@ -95,6 +83,19 @@ namespace Bus_Ticket_Booking.WebUI
                 Configuration["EmailSender:Password"]
                 ));
 
+            services.AddControllersWithViews();
+
+            services.AddScoped<ICityRepository, EfCoreCityRepository>();
+            services.AddScoped<IRouteRepository, EfCoreRouteRepository>();
+            services.AddScoped<ITicketRepository, EfCoreTicketRepository>();
+            services.AddScoped<IBusRepository, EfCoreBusRepository>();
+
+            services.AddScoped<ICityService, CityManager>();
+            services.AddScoped<IRouteService, RouteManager>();
+            services.AddScoped<ITicketService, TicketManager>();
+            services.AddScoped<IBusService, BusManager>();
+
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -113,7 +114,7 @@ namespace Bus_Ticket_Booking.WebUI
             }
             app.UseHttpsRedirection();
             app.UseStaticFiles();
-
+            app.UseAuthentication();
             app.UseRouting();
 
             app.UseAuthorization();
@@ -121,11 +122,35 @@ namespace Bus_Ticket_Booking.WebUI
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
+                   name: "adminusers",
+                   pattern: "admin/user/list",
+                   defaults: new { controller = "Admin", action = "UserList" }
+                   );
+
+               endpoints.MapControllerRoute(
+                    name: "adminrolecreate",
+                    pattern: "admin/role/create",
+                    defaults: new { controller = "Admin", action = "RoleCreate" }
+                    );
+                endpoints.MapControllerRoute(
+                    name: "adminroles",
+                    pattern: "admin/role/list",
+                    defaults: new { controller = "Admin", action = "RoleList" }
+                    );
+
+                endpoints.MapControllerRoute(
+                    name: "adminroleedit",
+                    pattern: "admin/role/{id}",
+                    defaults: new { controller = "Admin", action = "RoleEdit" }
+                    );
+
+  
+
+                endpoints.MapControllerRoute(
                     name: "adminlist",
                     pattern: "admin/adminlist",
                     defaults: new { controller = "Admin", action = "AdminList" }
                     );
-
 
                 endpoints.MapControllerRoute(
                     name: "default",

@@ -24,20 +24,28 @@ namespace Bus_Ticket_Booking.WebUI.Controllers
             _signInManager = signInManager;
             _emailSender = emailSender;
         }
+        public IActionResult AccessDenied()
+        {
+            return View();
+        }
+        public IActionResult Login(string returnUrl)
+        {
+            return View(new LoginModel()
+            {
+                ReturnUrl = returnUrl
+            });
+        }
         public IActionResult Index()
         {
             return View();
         }
-        public IActionResult Login()
-        {
-            return View();
-        }
+
         [HttpPost]
         public async Task<IActionResult> Login(LoginModel model)
         {
             if (!ModelState.IsValid)
             {
-                return View();
+                return View(model);
             }
 
             var user = await _userManager.FindByNameAsync(model.UserName);
@@ -56,7 +64,7 @@ namespace Bus_Ticket_Booking.WebUI.Controllers
 
             if (result.Succeeded)
             {
-                return RedirectToAction("Index", "Home");
+                return Redirect(model.ReturnUrl ?? "~/");
             }
 
             CreateMessage("Şifreniz hatalı", "danger");
@@ -83,7 +91,7 @@ namespace Bus_Ticket_Booking.WebUI.Controllers
             };
 
             var result = await _userManager.CreateAsync(user, model.Password);
-            if (result.Succeeded)//Başarılı bir şekilde create gerçekleştiyse
+            if (result.Succeeded)
             {
                 var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
                 var url = Url.Action("ConfirmEmail", "Account", new
@@ -91,7 +99,7 @@ namespace Bus_Ticket_Booking.WebUI.Controllers
                     userId = user.Id,
                     token = code
                 });
-                //email gönderme işlemi
+
                 await _emailSender.SendEmailAsync(model.Email, "OZTUR Confirm Account!", $"Lütfen email adresinizi onaylamak için <a href='https://localhost:5001{url}'>tıklayınız!</a>");
                 CreateMessage("Kayıt işleminizi tamamlamak için mailinize gönderilen onaylama linkine tıklayınız!", "warning");
                 return RedirectToAction("Login", "Account");

@@ -14,5 +14,6 @@ namespace Bus_Ticket_Booking.WebUI.Models
         [Required(ErrorMessage = "Şifrenizi Giriniz!")]
         [DataType(DataType.Password)]
         public string Password { get; set; }
+        public string ReturnUrl { get; set; }
     }
 }

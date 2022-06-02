@@ -9,7 +9,7 @@ namespace Bus_Ticket_Booking.WebUI.Identity
 {
     public class ApplicationContext : IdentityDbContext<User>
     {
-        public ApplicationContext(DbContextOptions<ApplicationContext> options) : base(options)
+        public ApplicationContext(DbContextOptions<ApplicationContext>options):base(options)
         {
 
         }
