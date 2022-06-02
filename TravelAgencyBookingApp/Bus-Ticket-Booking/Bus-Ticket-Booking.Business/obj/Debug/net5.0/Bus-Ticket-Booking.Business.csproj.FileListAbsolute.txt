@@ -48,3 +48,4 @@ C:\Users\Wissen\Desktop\Ahmet-OZTURK\TravelAgencyBookingApp\Bus-Ticket-Booking\B
 C:\Users\Wissen\Desktop\Ahmet-OZTURK\TravelAgencyBookingApp\Bus-Ticket-Booking\Bus-Ticket-Booking.Business\obj\Debug\net5.0\Bus-Ticket-Booking.Business.dll
 C:\Users\Wissen\Desktop\Ahmet-OZTURK\TravelAgencyBookingApp\Bus-Ticket-Booking\Bus-Ticket-Booking.Business\obj\Debug\net5.0\ref\Bus-Ticket-Booking.Business.dll
 C:\Users\Wissen\Desktop\Ahmet-OZTURK\TravelAgencyBookingApp\Bus-Ticket-Booking\Bus-Ticket-Booking.Business\obj\Debug\net5.0\Bus-Ticket-Booking.Business.pdb
+C:\Users\Wissen\Desktop\Ahmet-OZTURK\TravelAgencyBookingApp\Bus-Ticket-Booking\Bus-Ticket-Booking.Business\obj\Debug\net5.0\Bus-Ticket-Booking.Business.csproj.CopyComplete
