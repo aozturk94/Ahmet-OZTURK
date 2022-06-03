@@ -188,3 +188,7 @@ C:\Users\Ahmet Ozturk\Desktop\Ahmet-OZTURK\TravelAgencyBookingApp\Bus-Ticket-Boo
 C:\Users\Ahmet Ozturk\Desktop\Ahmet-OZTURK\TravelAgencyBookingApp\Bus-Ticket-Booking\Bus-Ticket-Booking.WebUI\obj\Debug\net5.0\Razor\Views\Admin\RoleCreate.cshtml.g.cs
 C:\Users\Ahmet Ozturk\Desktop\Ahmet-OZTURK\TravelAgencyBookingApp\Bus-Ticket-Booking\Bus-Ticket-Booking.WebUI\obj\Debug\net5.0\Razor\Views\Admin\RoleEdit.cshtml.g.cs
 C:\Users\Ahmet Ozturk\Desktop\Ahmet-OZTURK\TravelAgencyBookingApp\Bus-Ticket-Booking\Bus-Ticket-Booking.WebUI\obj\Debug\net5.0\Razor\Views\Admin\RoleList.cshtml.g.cs
+C:\Users\Wissen\Desktop\Ahmet-OZTURK\TravelAgencyBookingApp\Bus-Ticket-Booking\Bus-Ticket-Booking.WebUI\obj\Debug\net5.0\Razor\Views\Admin\RoleCreate.cshtml.g.cs
+C:\Users\Wissen\Desktop\Ahmet-OZTURK\TravelAgencyBookingApp\Bus-Ticket-Booking\Bus-Ticket-Booking.WebUI\obj\Debug\net5.0\Razor\Views\Admin\RoleEdit.cshtml.g.cs
+C:\Users\Wissen\Desktop\Ahmet-OZTURK\TravelAgencyBookingApp\Bus-Ticket-Booking\Bus-Ticket-Booking.WebUI\obj\Debug\net5.0\Razor\Views\Admin\RoleList.cshtml.g.cs
+C:\Users\Wissen\Desktop\Ahmet-OZTURK\TravelAgencyBookingApp\Bus-Ticket-Booking\Bus-Ticket-Booking.WebUI\obj\Debug\net5.0\Razor\Views\Admin\UserList.cshtml.g.cs
