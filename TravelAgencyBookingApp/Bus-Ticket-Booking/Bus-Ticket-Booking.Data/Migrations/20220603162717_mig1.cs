@@ -65,6 +65,7 @@ namespace Bus_Ticket_Booking.Data.Migrations
                     TravelTo = table.Column<string>(type: "TEXT", nullable: true),
                     SeatNumber = table.Column<int>(type: "INTEGER", nullable: false),
                     Price = table.Column<double>(type: "REAL", nullable: false),
+                    PeronNumber = table.Column<int>(type: "INTEGER", nullable: false),
                     RouteId = table.Column<int>(type: "INTEGER", nullable: false)
                 },
                 constraints: table =>

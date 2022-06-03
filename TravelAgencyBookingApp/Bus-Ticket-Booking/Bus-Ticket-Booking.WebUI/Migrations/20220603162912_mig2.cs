@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Bus_Ticket_Booking.WebUI.Migrations
 {
-    public partial class IdentityMig : Migration
+    public partial class mig2 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

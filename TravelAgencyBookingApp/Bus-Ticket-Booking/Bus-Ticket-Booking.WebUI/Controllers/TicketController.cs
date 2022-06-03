@@ -1,8 +1,11 @@
 ﻿using Bus_Ticket_Booking.Business.Abstract;
 using Bus_Ticket_Booking.Entity;
+using Bus_Ticket_Booking.WebUI.EmailServices;
 using Bus_Ticket_Booking.WebUI.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,13 +18,17 @@ namespace Bus_Ticket_Booking.WebUI.Controllers
         private IRouteService _routeService;
         private ITicketService _ticketService;
         private IBusService _busService;
+        private IEmailSender _emailSender;
 
-        public TicketController(IRouteService routeService, ITicketService ticketService, IBusService busService)
+        public TicketController(IRouteService routeService, ITicketService ticketService, IBusService busService, IEmailSender emailSender)
         {
             _routeService = routeService;
             _ticketService = ticketService;
             _busService = busService;
+            _emailSender = emailSender;
         }
+
+        [Authorize]
         public IActionResult Details(int id)
         {
             Route route = _routeService.GetRouteDetails(id);
@@ -86,5 +93,61 @@ namespace Bus_Ticket_Booking.WebUI.Controllers
             return View(routeTicket);
         }
 
+        [HttpPost]
+        public async Task<IActionResult> TicketDetails(string email)
+        {
+            Ticket lastTicket = _ticketService.GetLastTicket();
+            int routeId = _ticketService.GetId();
+            string Time = _ticketService.GetTime(routeId);
+            string Date = _ticketService.GetDate(routeId);
+
+            var routeTicket = new RouteTicket()
+            {
+                Date = Date,
+                Time = Time,
+                Ticket = lastTicket
+            };
+
+            await _emailSender.SendEmailAsync(email, "OZTUR Ticket Info", @$"<table>
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th>Ticket No</th>
+                                                                            <th>Name</th>
+                                                                            <th>Travel From</th>
+                                                                            <th>Travel To</th>
+                                                                            <th>Seat Number</th>
+                                                                            <th>Price</th>
+                                                                            <th>Date - Time</th>
+                                                                            <th>Sefer No</th>
+
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>{routeTicket.Ticket.PeronNumber}</td>
+                                                                            <td>{routeTicket.Ticket.CostumerName} {routeTicket.Ticket.CosturmerSurname}</td>
+                                                                            <td>{routeTicket.Ticket.TravelFrom}</td>
+                                                                            <td>{routeTicket.Ticket.TravelTo}</td>
+                                                                            <td>{routeTicket.Ticket.SeatNumber}</td>
+                                                                            <td>{routeTicket.Ticket.Price} ₺</td>
+                                                                            <td>{routeTicket.Date} - {routeTicket.Time}</td>
+                                                                            <td>{routeTicket.Ticket.RouteId}</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>");
+
+            CreateMessage("Bilet bilgileriniz mail adresine gönderilmiştir!", "success");
+            return View(routeTicket);
+        }
+        private void CreateMessage(string message, string alertType)
+        {
+            var msg = new AlertMessage()
+            {
+                Message = message,
+                AlertType = alertType
+            };
+
+            TempData["Message"] = JsonConvert.SerializeObject(msg);
+        }
     }
 }

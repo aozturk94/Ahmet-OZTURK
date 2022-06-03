@@ -49,92 +49,103 @@
 
 
                     <input type="hidden" name="RouteId" value="@Model.RouteId" />
-                    @if ((@TempData["startLocation"].ToString() == @Model.StartLocation) && (@TempData["endLocation"].ToString() == @Model.EndLocation))
-                    {
-                        <p style="text-align: right; font-size:26px;">@Model.Price ₺</p>
-                        <input type="hidden" name="price" value="@Model.Price" />}
-                    @*@if ((@TempData["startLocation"].ToString() == @Model.StartLocation) && (@TempData["endLocation"].ToString() == @Model.EndLocation))
-                    {
-        <p style="text-align: right; font-size:26px;">@Price1 ₺</p>
-                        <input type="hidden" name="price" value="@Price1" />}*@
-                    @if ((@TempData["startLocation"].ToString() == @Model.StartLocation) && (@TempData["endLocation"].ToString() == @Model.FirstStation))
-                    {
-                        <p style="text-align: right; font-size:26px;">@Price2 ₺</p>
-                        <input type="hidden" name="price" value="@Price2" />}
-                    @if ((@TempData["startLocation"].ToString() == @Model.StartLocation) && (@TempData["endLocation"].ToString() == @Model.SecondStation))
-                    {
-                        <p style="text-align: right; font-size:26px;">@Price3 ₺</p>
-                        <input type="hidden" name="price" value="@Price3" />}
-                    @if ((@TempData["startLocation"].ToString() == @Model.FirstStation) && (@TempData["endLocation"].ToString() == @Model.EndLocation))
-                    {
-                        <p style="text-align: right; font-size:26px;">@Price1 ₺</p>
-                        <input type="hidden" name="price" value="@Price1" />}
-                    @if ((@TempData["startLocation"].ToString() == @Model.FirstStation) && (@TempData["endLocation"].ToString() == @Model.ThirdStation))
-                    {
-                        <p style="text-align: right; font-size:26px;">@Price2 ₺</p>
-                        <input type="hidden" name="price" value="@Price2" />}
-                    @if ((@TempData["startLocation"].ToString() == @Model.FirstStation) && (@TempData["endLocation"].ToString() == @Model.SecondStation))
-                    {
-                        <p style="text-align: right; font-size:26px;">@Price3 ₺</p>
-                        <input type="hidden" name="price" value="@Price3" />}
-                    @if ((@TempData["startLocation"].ToString() == @Model.FirstStation) && (@TempData["endLocation"].ToString() == @Model.StartLocation))
-                    {
-                        <p style="text-align: right; font-size:26px;">@Price5 ₺</p>
-                        <input type="hidden" name="price" value="@Price5" />}
-                    @if ((@TempData["startLocation"].ToString() == @Model.SecondStation) && (@TempData["endLocation"].ToString() == @Model.EndLocation))
-                    {
-                        <p style="text-align: right; font-size:26px;">@Price3 ₺</p>
-                        <input type="hidden" name="price" value="@Price3" />}
-                    @if ((@TempData["startLocation"].ToString() == @Model.SecondStation) && (@TempData["endLocation"].ToString() == @Model.ThirdStation))
-                    {
-                        <p style="text-align: right; font-size:26px;">@Price5 ₺</p>
-                        <input type="hidden" name="price" value="@Price5" />}
-                    @if ((@TempData["startLocation"].ToString() == @Model.SecondStation) && (@TempData["endLocation"].ToString() == @Model.StartLocation))
-                    {
-                        <p style="text-align: right; font-size:26px;">@Price4 ₺</p>
-                        <input type="hidden" name="price" value="@Price4" />}
-                    @if ((@TempData["startLocation"].ToString() == @Model.SecondStation) && (@TempData["endLocation"].ToString() == @Model.FirstStation))
-                    {
-                        <p style="text-align: right; font-size:26px;">@Price5 ₺</p>
-                        <input type="hidden" name="price" value="@Price5" />}
-                    @if ((@TempData["startLocation"].ToString() == @Model.ThirdStation) && (@TempData["endLocation"].ToString() == @Model.EndLocation))
-                    {
-                        <p style="text-align: right; font-size:26px;">@Price5 ₺</p>
-                        <input type="hidden" name="price" value="@Price5" />}
-                    @if ((@TempData["startLocation"].ToString() == @Model.ThirdStation) && (@TempData["endLocation"].ToString() == @Model.SecondStation))
-                    {
-                        <p style="text-align: right; font-size:26px;">@Price5 ₺</p>
-                        <input type="hidden" name="price" value="@Price5" />}
-                    @if ((@TempData["startLocation"].ToString() == @Model.ThirdStation) && (@TempData["endLocation"].ToString() == @Model.StartLocation))
-                    {
-                        <p style="text-align: right; font-size:26px;">@Price3 ₺</p>
-                        <input type="hidden" name="price" value="@Price3" />}
-                    @if ((@TempData["startLocation"].ToString() == @Model.ThirdStation) && (@TempData["endLocation"].ToString() == @Model.FirstStation))
-                    {
-                        <p style="text-align: right; font-size:26px;">@Price4 ₺</p>
-                        <input type="hidden" name="price" value="@Price4" />}
-                    @if ((@TempData["startLocation"].ToString() == @Model.EndLocation) && (@TempData["endLocation"].ToString() == @Model.SecondStation))
-                    {
-                        <p style="text-align: right; font-size:26px;">@Price3 ₺</p>
-                        <input type="hidden" name="price" value="@Price3" />}
-                    @if ((@TempData["startLocation"].ToString() == @Model.EndLocation) && (@TempData["endLocation"].ToString() == @Model.ThirdStation))
-                    {
-                        <p style="text-align: right; font-size:26px;">@Price5 ₺</p>
-                        <input type="hidden" name="price" value="@Price5" />}
-                    @if ((@TempData["startLocation"].ToString() == @Model.EndLocation) && (@TempData["endLocation"].ToString() == @Model.StartLocation))
-                    {
-                        <p style="text-align: right; font-size:26px;">@Price</p>
-                        <input type="hidden" name="price" value="@Price" />}
-                    @if ((@TempData["startLocation"].ToString() == @Model.EndLocation) && (@TempData["endLocation"].ToString() == @Model.FirstStation))
-                    {
-                        <p style="text-align: right; font-size:26px;">@Price2 ₺</p>
-                        <input type="hidden" name="price" value="@Price2" />}
+                        @if ((@TempData["startLocation"].ToString() == @Model.StartLocation) && (@TempData["endLocation"].ToString() == @Model.EndLocation))
+                        {
+                            <p style="text-align: right; font-size:26px;">@Model.Price ₺</p>
+                            <input type="hidden" name="price" value="@Model.Price" />}
+
+                        @if ((@TempData["startLocation"].ToString() == @Model.StartLocation) && (@TempData["endLocation"].ToString() == @Model.FirstStation))
+                        {
+                            <p style="text-align: right; font-size:26px;">@Price2 ₺</p>
+                            <input type="hidden" name="price" value="@Price2" />}
+
+                        @if ((@TempData["startLocation"].ToString() == @Model.StartLocation) && (@TempData["endLocation"].ToString() == @Model.SecondStation))
+                        {
+                            <p style="text-align: right; font-size:26px;">@Price3 ₺</p>
+                            <input type="hidden" name="price" value="@Price3" />}
+
+                        @if ((@TempData["startLocation"].ToString() == @Model.FirstStation) && (@TempData["endLocation"].ToString() == @Model.EndLocation))
+                        {
+                            <p style="text-align: right; font-size:26px;">@Price1 ₺</p>
+                            <input type="hidden" name="price" value="@Price1" />}
+
+                        @if ((@TempData["startLocation"].ToString() == @Model.FirstStation) && (@TempData["endLocation"].ToString() == @Model.ThirdStation))
+                        {
+                            <p style="text-align: right; font-size:26px;">@Price2 ₺</p>
+                            <input type="hidden" name="price" value="@Price2" />}
+                        @if ((@TempData["startLocation"].ToString() == @Model.FirstStation) && (@TempData["endLocation"].ToString() == @Model.SecondStation))
+                        {
+                            <p style="text-align: right; font-size:26px;">@Price3 ₺</p>
+                            <input type="hidden" name="price" value="@Price3" />}
+
+                        @if ((@TempData["startLocation"].ToString() == @Model.FirstStation) && (@TempData["endLocation"].ToString() == @Model.StartLocation))
+                        {
+                            <p style="text-align: right; font-size:26px;">@Price5 ₺</p>
+                            <input type="hidden" name="price" value="@Price5" />}
+
+                        @if ((@TempData["startLocation"].ToString() == @Model.SecondStation) && (@TempData["endLocation"].ToString() == @Model.EndLocation))
+                        {
+                            <p style="text-align: right; font-size:26px;">@Price3 ₺</p>
+                            <input type="hidden" name="price" value="@Price3" />}
+
+                        @if ((@TempData["startLocation"].ToString() == @Model.SecondStation) && (@TempData["endLocation"].ToString() == @Model.ThirdStation))
+                        {
+                            <p style="text-align: right; font-size:26px;">@Price5 ₺</p>
+                            <input type="hidden" name="price" value="@Price5" />}
+
+                        @if ((@TempData["startLocation"].ToString() == @Model.SecondStation) && (@TempData["endLocation"].ToString() == @Model.StartLocation))
+                        {
+                            <p style="text-align: right; font-size:26px;">@Price4 ₺</p>
+                            <input type="hidden" name="price" value="@Price4" />}
+
+                        @if ((@TempData["startLocation"].ToString() == @Model.SecondStation) && (@TempData["endLocation"].ToString() == @Model.FirstStation))
+                        {
+                            <p style="text-align: right; font-size:26px;">@Price5 ₺</p>
+                            <input type="hidden" name="price" value="@Price5" />}
+
+                        @if ((@TempData["startLocation"].ToString() == @Model.ThirdStation) && (@TempData["endLocation"].ToString() == @Model.EndLocation))
+                        {
+                            <p style="text-align: right; font-size:26px;">@Price5 ₺</p>
+                            <input type="hidden" name="price" value="@Price5" />}
+
+                        @if ((@TempData["startLocation"].ToString() == @Model.ThirdStation) && (@TempData["endLocation"].ToString() == @Model.SecondStation))
+                        {
+                            <p style="text-align: right; font-size:26px;">@Price5 ₺</p>
+                            <input type="hidden" name="price" value="@Price5" />}
+
+                        @if ((@TempData["startLocation"].ToString() == @Model.ThirdStation) && (@TempData["endLocation"].ToString() == @Model.StartLocation))
+                        {
+                            <p style="text-align: right; font-size:26px;">@Price3 ₺</p>
+                            <input type="hidden" name="price" value="@Price3" />}
+
+                        @if ((@TempData["startLocation"].ToString() == @Model.ThirdStation) && (@TempData["endLocation"].ToString() == @Model.FirstStation))
+                        {
+                            <p style="text-align: right; font-size:26px;">@Price4 ₺</p>
+                            <input type="hidden" name="price" value="@Price4" />}
+
+                        @if ((@TempData["startLocation"].ToString() == @Model.EndLocation) && (@TempData["endLocation"].ToString() == @Model.SecondStation))
+                        {
+                            <p style="text-align: right; font-size:26px;">@Price3 ₺</p>
+                            <input type="hidden" name="price" value="@Price3" />}
+
+                        @if ((@TempData["startLocation"].ToString() == @Model.EndLocation) && (@TempData["endLocation"].ToString() == @Model.ThirdStation))
+                        {
+                            <p style="text-align: right; font-size:26px;">@Price5 ₺</p>
+                            <input type="hidden" name="price" value="@Price5" />}
+
+                        @if ((@TempData["startLocation"].ToString() == @Model.EndLocation) && (@TempData["endLocation"].ToString() == @Model.StartLocation))
+                        {
+                            <p style="text-align: right; font-size:26px;">@Price</p>
+                            <input type="hidden" name="price" value="@Price" />}
+
+                        @if ((@TempData["startLocation"].ToString() == @Model.EndLocation) && (@TempData["endLocation"].ToString() == @Model.FirstStation))
+                        {
+                            <p style="text-align: right; font-size:26px;">@Price2 ₺</p>
+                            <input type="hidden" name="price" value="@Price2" />}
 
 
                     <input type="hidden" name="startLocation" value="@TempData["startLocation"].ToString()" />
                     <input type="hidden" name="endLocation" value="@TempData["endLocation"].ToString()" />
-
-
 
                 </div>
 
@@ -144,13 +155,13 @@
             <br /><br /><hr /><br />
 
             <div class="form-group">
-            <input type="text" name="firstName" class="form-control  mb-3" id="" aria-describedby="" placeholder="Name">
+            <input type="text" name="firstName" class="form-control  mb-3" id="" aria-describedby="" placeholder="Name" required>
             </div>
             <div class="form-group">
-            <input type="text" name="lastName" class="form-control  mb-3" id="" aria-describedby="" placeholder="Surname">
+            <input type="text" name="lastName" class="form-control  mb-3" id="" aria-describedby="" placeholder="Surname" required>
             </div>
             <div class="form-group">
-            <input type="tel" name="PhoneNumber" class="form-control  mb-3" id="" aria-describedby="" placeholder="Phone" required="required">
+            <input type="tel" name="PhoneNumber" class="form-control  mb-3" id="" aria-describedby="" placeholder="Phone" required>
             </div>
             <div class="form-group">
             <select name="SeatNumber" class="form-select mb-3" asp-items="@ViewBag.SeatNumbers" required="required">
@@ -167,6 +178,4 @@
 
     </div>
     <br />
-
 </div>
-    <br />

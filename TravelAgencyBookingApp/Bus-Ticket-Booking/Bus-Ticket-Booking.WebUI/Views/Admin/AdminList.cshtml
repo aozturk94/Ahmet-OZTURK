@@ -2,26 +2,31 @@
 
 
 
-<div class="mt-3 container">
+<div class="mt-3">
     <div class="row">
         <div class="col-sm-2">
             <ul class="text-center">
-                <li class="nav__item">
-                    <a href="/admin/role/list" class="nav__link">Roles</a>
+                <li class="nav__item mt-4">
+                    <i class="fa-brands fa-yelp"></i>
+                    <a href="/admin/user/list" class="nav__link">USERS</a>
+                    <br />
                 </li>
                 <li class="nav__item mt-4">
-                    <a href="/admin/user/list" class="nav__link">Users</a>
+                    <i class="fa-brands fa-yelp"></i>
+                    <a href="/admin/role/list" class="nav__link">ROLES</a>
                 </li>
                 <li class="nav__item mt-4">
-                    <a class="nav__link" asp-controller="Admin" asp-action="ListRoute">Routes</a>
+                    <i class="fa-brands fa-yelp"></i>
+                    <a class="nav__link" asp-controller="Admin" asp-action="ListRoute">ROUTES</a>
                 </li>
                 <li class="nav__item mt-4">
-                    <a class="nav__link" asp-controller="" asp-action="">ÇIKIŞ</a>
+                    <i class="fa-solid fa-delete-left"></i>
+                    <a class="nav__link" asp-controller="Home" asp-action="Index">RETURN TO HOMEPAGE</a>
                 </li>
             </ul>
         </div>
 
-        <div class="col-md-10">
+        <div class="col-md-8">
             <h1 class="h3"> Bilet Kontrol</h1> <hr /> <br />
             <table class="table table table-bordered shadow-sm mt-3">
                 <thead>

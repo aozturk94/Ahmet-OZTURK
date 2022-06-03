@@ -15,6 +15,10 @@
         <div class="col-md-12">
             <h6 class="display-4">User List</h6>
             <hr />
+            <a href="/admin/user/create" class="btn btn-sm btn-primary">Create User</a>
+            <i class="fa-brands fa-yelp"></i>
+            <a class="nav__link" asp-controller="Admin" asp-action="AdminList">Back</a>
+            <hr />
             <table data-page-length="5" class="table table-sm table-bordered hover" id="userList">
                 <thead>
                     <tr>
@@ -23,6 +27,7 @@
                         <th>User Name</th>
                         <th>Email</th>
                         <th>Email Confirmed</th>
+                        <th>Actions</th>
 
                     </tr>
                 </thead>
@@ -37,6 +42,13 @@
                                 <td>@user.UserName</td>
                                 <td>@user.Email</td>
                                 <td>@user.EmailConfirmed</td>
+                                <td>
+                                    <a href="/admin/user/@user.Id" class="btn btn-sm btn-primary mr-2">Edit</a>
+                                    <form asp-controller="Admin" asp-action="DeleteUser" method="post" class="d-inline">
+                                        <input type="hidden" name="UserId" value="@user.Id" />
+                                        <button type="submit" class="btn btn-sm btn-danger">Delete</button>
+                                    </form>
+                                </td>
                             </tr>
                         }
                     }

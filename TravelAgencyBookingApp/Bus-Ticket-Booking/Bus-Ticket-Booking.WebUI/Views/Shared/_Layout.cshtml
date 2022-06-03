@@ -43,7 +43,7 @@
                         if (User.IsInRole("Admin"))
                         {
                         <li class="nav__item">
-                            <a class="nav__link" href="/admin/adminList">Admin</a>
+                            <a class="nav__link" href="/admin/adminList">Admin Panel</a>
                         </li>
                         }
                     }
@@ -82,7 +82,7 @@
     {
         var message = JsonConvert.DeserializeObject<AlertMessage>(TempData["Message"] as String);
         <div class="row">
-            <div class="col-md-12 alert">
+            <div class="col-md-12 alert text-center">
                 <div class="alert alert-@message.AlertType">
                     @message.Message
                 </div>

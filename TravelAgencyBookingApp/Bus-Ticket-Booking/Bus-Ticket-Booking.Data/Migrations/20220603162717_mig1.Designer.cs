@@ -8,8 +8,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Bus_Ticket_Booking.Data.Migrations
 {
     [DbContext(typeof(BookingContext))]
-    [Migration("20220523232034_mig2")]
-    partial class mig2
+    [Migration("20220603162717_mig1")]
+    partial class mig1
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

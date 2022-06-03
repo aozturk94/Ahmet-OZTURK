@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Bus_Ticket_Booking.WebUI.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    [Migration("20220531112434_IdentityMig")]
-    partial class IdentityMig
+    [Migration("20220603162912_mig2")]
+    partial class mig2
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

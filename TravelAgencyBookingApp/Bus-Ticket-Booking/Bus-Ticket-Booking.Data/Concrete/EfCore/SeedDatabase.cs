@@ -57,8 +57,8 @@ namespace Bus_Ticket_Booking.Data.Concrete.EfCore
 
         private static Route[] Routes =
         {
-            new Route() { StartLocation = "İstanbul", FirstStation = "Kocaeli", SecondStation = "Kütahya", ThirdStation = "Afyon", EndLocation = "Isparta", Date = "15.06.2022", Time = "19.00", Price = 110 },
-            new Route() { StartLocation = "Rize", FirstStation = "Ordu", SecondStation = "Samsun", ThirdStation = "Kocaeli", EndLocation = "İstanbul", Date = "16.06.2022", Time = "19.00", Price = 180 }
+            new Route() { StartLocation = "İstanbul", FirstStation = "Kocaeli", SecondStation = "Kütahya", ThirdStation = "Afyon", EndLocation = "Isparta", Date = "2022-05-30", Time = "19:00", Price = 300 },
+            new Route() { StartLocation = "Rize", FirstStation = "Ordu", SecondStation = "Samsun", ThirdStation = "Kocaeli", EndLocation = "İstanbul", Date = "2022-05-30", Time = "19:00", Price = 300 }
         };
 
         private static Ticket[] Tickets =
