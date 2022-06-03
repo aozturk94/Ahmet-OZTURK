@@ -40,6 +40,7 @@ namespace Bus_Ticket_Booking.WebUI.Controllers
                 seatNumbers.Remove(item);
             }
 
+            ViewBag.Seat = seats;
             ViewBag.SeatNumber = seatNumber;
             ViewBag.SeatNumbers = new SelectList(seatNumbers);
 

@@ -51,4 +51,3 @@ C:\Users\Wissen\Desktop\Ahmet-OZTURK\TravelAgencyBookingApp\Bus-Ticket-Booking\B
 C:\Users\Wissen\Desktop\Ahmet-OZTURK\TravelAgencyBookingApp\Bus-Ticket-Booking\Bus-Ticket-Booking.Data\obj\Debug\net5.0\ref\Bus-Ticket-Booking.Data.dll
 C:\Users\Wissen\Desktop\Ahmet-OZTURK\TravelAgencyBookingApp\Bus-Ticket-Booking\Bus-Ticket-Booking.Data\obj\Debug\net5.0\Bus-Ticket-Booking.Data.pdb
 C:\Users\Wissen\Desktop\Ahmet-OZTURK\TravelAgencyBookingApp\Bus-Ticket-Booking\Bus-Ticket-Booking.Data\obj\Debug\net5.0\Bus-Ticket-Booking.Data.genruntimeconfig.cache
-C:\Users\Wissen\Desktop\Ahmet-OZTURK\TravelAgencyBookingApp\Bus-Ticket-Booking\Bus-Ticket-Booking.Data\obj\Debug\net5.0\Bus-Ticket-Booking.Data.csproj.CopyComplete
